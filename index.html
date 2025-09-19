@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,9 +16,7 @@
             <div class="logo">Gagan Gowda BG</div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -31,24 +29,21 @@
 
     <section class="hero">
         <div class="hero-content">
-            <div class="typing-container">
-                <h1>AI & Data Science Engineer</h1>
-            </div>
-            <p class="hero-subtitle">An aspiring Data Science professional with a strong foundation in Computer Science and a passion for solving real-world problems through AI. Fast learner with a structured mindset and solid analytical skills.</p>
-            <a href="Gagan_Gowda_Resume.pdf" class="hero-button" target="_blank">Download Resume</a>
+            <h1 class="reveal-up">AI & Data Science Engineer</h1>
+            <p class="reveal-up">An aspiring Data Science professional with a passion for solving real-world problems through intelligent, data-driven solutions.</p>
+            <a href="Gagan_Gowda_Resume.pdf" class="hero-button reveal-up" target="_blank">Download Resume</a>
         </div>
     </section>
 
     <div class="main-content">
         <section id="about" class="content-section">
-            <h2 class="section-title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <img src="profile-pic.jpg" alt="Gagan Gowda" class="profile-pic">
-                    <h3>Education</h3>
-                    <p>I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>, graduating in 2026. My academic journey has provided me with a solid analytical foundation and a deep passion for technology.</p>
+                    <img src="profile-pic.jpg" alt="Gagan Gowda" class="profile-pic reveal-up">
+                    <h2 class="section-title reveal-up">About Me</h2>
+                    <p class="reveal-up">I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>. My academic journey has provided me with a solid analytical foundation and a deep passion for technology and its potential to create impactful solutions.</p>
                 </div>
-                <div class="timeline">
+                <div class="timeline reveal-up">
                     <div class="timeline-item">
                         <div class="timeline-content">
                             <h4>B.E, Computer Science And Engineering</h4>
@@ -72,72 +67,80 @@
         </section>
 
         <section id="skills" class="content-section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h4>Languages</h4>
-                    <p>Python, Java (familiar), C (basic), JavaScript (learning)</p>
-                </div>
-                <div class="skill-card">
-                    <h4>Technologies</h4>
-                    <p>SQL, Git, GitHub, Jupyter Notebook, TensorFlow/Keras, Flask, Airflow, Docker, OpenCV</p>
-                </div>
-                 <div class="skill-card">
-                    <h4>Spoken Languages</h4>
-                    <p>English (Proficient), Hindi, Kannada (Native), Telugu</p>
+            <div class="marquee">
+                <div class="marquee-content">
+                    <span>PYTHON</span><span>&bull;</span>
+                    <span>TENSORFLOW</span><span>&bull;</span>
+                    <span>KERAS</span><span>&bull;</span>
+                    <span>SQL</span><span>&bull;</span>
+                    <span>DOCKER</span><span>&bull;</span>
+                    <span>APACHE AIRFLOW</span><span>&bull;</span>
+                    <span>GIT</span><span>&bull;</span>
+                    <span>FLASK</span><span>&bull;</span>
+                    <span>PYTHON</span><span>&bull;</span>
+                    <span>TENSORFLOW</span><span>&bull;</span>
+                    <span>KERAS</span><span>&bull;</span>
+                    <span>SQL</span><span>&bull;</span>
+                    <span>DOCKER</span><span>&bull;</span>
+                    <span>APACHE AIRFLOW</span><span>&bull;</span>
+                    <span>GIT</span><span>&bull;</span>
+                    <span>FLASK</span><span>&bull;</span>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="content-section">
-            <h2 class="section-title">Projects</h2>
+            <h2 class="section-title reveal-up">Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <a href="project1.html" class="project-card reveal-up">
+                    <div class="project-image-container">
+                        <img src="grapecare-ui.png" alt="GrapeCare Application Screenshot">
+                    </div>
                     <div class="project-info">
-                        <span class="project-tag">Major Project</span>
-                        <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
-                        <p>My final year major project. A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
-                        <a href="project1.html">View Case Study</a>
+                        <h3>GrapeCare AI Detector</h3>
+                        <p>A deep learning powered web app for grape disease diagnosis.</p>
                     </div>
-                </div>
-                <div class="project-card">
-                     <div class="project-info">
-                        <span class="project-tag">Technical Assignment</span>
-                        <h3>Dockerized Stock Data Pipeline</h3>
-                        <p>A containerized ETL pipeline with Apache Airflow to fetch stock data and store it in PostgreSQL.</p>
-                        <a href="project2.html">View Case Study</a>
+                </a>
+                <a href="project2.html" class="project-card reveal-up">
+                    <div class="project-image-container">
+                       <img src="airflow-dashboard.png" alt="Airflow Dashboard Screenshot">
                     </div>
-                </div>
-                <div class="project-card">
-                     <div class="project-info">
-                        <span class="project-tag">Hardware & IoT</span>
-                        <h3>Colour-Based Object Sorting System</h3>
-                        <p>A prototype using Python, OpenCV, and Arduino for automated color-based sorting.</p>
-                        <a href="project3.html">View Case Study</a>
+                    <div class="project-info">
+                        <h3>Dockerized Data Pipeline</h3>
+                        <p>An automated ETL pipeline using Airflow and PostgreSQL.</p>
                     </div>
-                </div>
+                </a>
+                <a href="project3.html" class="project-card reveal-up">
+                    <div class="project-image-container">
+                        <img src="img1.png" alt="Object Sorting Machine Prototype">
+                    </div>
+                    <div class="project-info">
+                        <h3>IoT Object Sorter</h3>
+                        <p>A hardware prototype for color-based object sorting.</p>
+                    </div>
+                </a>
             </div>
         </section>
 
-        <section id="achievements" class="content-section">
-            <h2 class="section-title">Achievements & Certifications</h2>
+         <section id="achievements" class="content-section">
+            <h2 class="section-title reveal-up">Achievements & Certifications</h2>
             <div class="achievements-grid">
-                <div class="achievements-column">
+                <div class="achievements-column reveal-up">
                     <h3>Achievements</h3>
                     <ul>
-                        <li>Volunteer in organizing Sentinel Hack 5.0</li>
-                        <li>Organizing Committee Member, The Great Bengaluru Hackathon - 2025</li>
-                        <li>Core Committee Member, College Fest Organization</li>
+                        <li>Volunteer, Sentinel Hack 5.0</li>
+                        <li>Organizing Committee, The Great Bengaluru Hackathon</li>
+                        <li>Core Committee Member, College Fest</li>
                         <li>Division-Level Kabaddi Player</li>
                     </ul>
                 </div>
-                <div class="achievements-column">
+                <div class="achievements-column reveal-up">
                     <h3>Certifications</h3>
                     <ul>
-                        <li>Machine Learning Fundamentals (Infosys SpringBoard)</li>
-                        <li>Artificial Intelligence in Industrial and Management Engineering (NPTEL)</li>
-                        <li>100 Days of Code: The Complete Python Pro Bootcamp (Udemy)</li>
-                        <li>Programming Fundamentals using Python (Infosys SpringBoard)</li>
+                        <li>Machine Learning Fundamentals (Infosys)</li>
+                        <li>AI in Engineering (NPTEL)</li>
+                        <li>Python Pro Bootcamp (Udemy)</li>
+                        <li>Python Fundamentals (Infosys)</li>
                     </ul>
                 </div>
             </div>
@@ -145,11 +148,11 @@
     </div>
 
     <footer id="contact">
-        <h2>Let's Connect</h2>
-        <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
-        <p><strong>gaganngowdaa08@gmail.com</strong></p>
-        <p>+91 9019598767</p>
-        <div class="social-links">
+        <h2 class="reveal-up">Let's Connect</h2>
+        <p class="reveal-up">I'm currently seeking new opportunities. Feel free to reach out!</p>
+        <p class="reveal-up"><strong>gaganngowdaa08@gmail.com</strong></p>
+        <p class="reveal-up">+91 9019598767</p>
+        <div class="social-links reveal-up">
             <a href="https://www.linkedin.com/in/gagan-gowda-1b63a22b4/" target="_blank">LinkedIn</a>
             &nbsp;|&nbsp;
             <a href="https://github.com/gaganngowdaa08" target="_blank">GitHub</a>
@@ -161,29 +164,20 @@
         const navSlide = () => {
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
-
             hamburger.addEventListener('click', () => {
                 nav.classList.toggle('nav-active');
                 hamburger.classList.toggle('toggle');
-                navLinks.forEach((link, index) => {
-                    if (link.style.animation) {
-                        link.style.animation = '';
-                    } else {
-                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-                    }
-                });
             });
         }
         navSlide();
 
         const sr = ScrollReveal({
-            distance: '50px',
-            duration: 1500,
-            easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+            distance: '30px',
+            duration: 1000,
+            easing: 'ease-out',
             reset: false
         });
-        sr.reveal('.section-title, .about-text, .timeline, .skill-card, .project-card, .achievements-column', {
+        sr.reveal('.reveal-up', {
             origin: 'bottom',
             interval: 100
         });
