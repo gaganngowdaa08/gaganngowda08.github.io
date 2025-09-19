@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gagan Gowda's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Gagan Gowda BG | AI & Data Science Portfolio</title> <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -38,6 +37,7 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-grid">
             <div class="about-text">
+                <img src="profile-pic.jpg" alt="Gagan Gowda" class="profile-pic">
                 <h3>Education</h3>
                 <p>I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>, graduating in 2026. My academic journey has provided me with a solid analytical foundation and a deep passion for technology.</p>
             </div>
@@ -148,5 +148,19 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        const sr = ScrollReveal({
+            distance: '50px',
+            duration: 1500,
+            easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+            reset: false
+        });
+        sr.reveal('.section-title', { origin: 'top' });
+        sr.reveal('.about-text, .timeline', { origin: 'left' });
+        sr.reveal('.skill-card', { interval: 200 });
+        sr.reveal('.project-card', { interval: 200 });
+        sr.reveal('.achievements-column', { origin: 'bottom', interval: 200 });
+    </script>
 </body>
 </html>
