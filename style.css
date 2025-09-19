@@ -206,3 +206,17 @@ nav .logo a {
     text-decoration: none;
     color: #333;
 }
+/* Styles for the project image gallery */
+.image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
