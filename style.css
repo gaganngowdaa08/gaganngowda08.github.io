@@ -1,10 +1,9 @@
-/* --- NEW "HACKER THEME" PORTFOLIO STYLES --- */
+/* --- FINAL ANIMATED PORTFOLIO STYLES --- */
 
 /* 1. Global Styles & Dark Mode Variables */
 :root {
     --primary-color: #00FFD1; /* A bright, techy cyan/green */
-    --primary-hover: #ffffff;
-    --background-color: #0A192F; /* A deep navy blue */
+    --background-color: #0A192F;
     --card-color: #112240;
     --text-color: #ccd6f6;
     --heading-color: #ffffff;
@@ -12,189 +11,84 @@
 }
 
 body {
-    font-family: 'Roboto Mono', monospace; /* New monospace font */
+    font-family: 'Inter', sans-serif; /* A cleaner font for body text */
     margin: 0;
     padding: 0;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* 2. Header & Navigation */
+/* 2. Scroll Animation Setup */
+.content-section {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(30px); /* Slightly below */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.content-section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Move up */
+}
+
+/* 3. Header & Navigation */
 header {
-    background-color: rgba(10, 25, 47, 0.85); /* Dark, semi-transparent */
+    background-color: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
     padding: 1rem 5%;
     position: sticky;
     top: 0;
     z-index: 1000;
 }
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-nav .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--heading-color);
-}
-
+nav { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+nav .logo { font-size: 1.2rem; font-weight: 700; color: var(--heading-color); font-family: 'Roboto Mono', monospace; }
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
 nav ul li { margin-left: 2.5rem; }
-nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 400; transition: color 0.3s ease; }
+nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 600; transition: color 0.3s ease; }
 nav ul li a:hover { color: var(--primary-color); }
 
-/* 3. Hero Section & Typing Animation */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 90vh; /* Make it take up most of the screen */
-    padding: 0 2rem;
-    text-align: left;
-}
+/* 4. Hero Section & Typing Animation */
+.hero { display: flex; align-items: center; justify-content: center; min-height: 90vh; padding: 0 2rem; }
+.hero-content { max-width: 800px; text-align: center; }
+.typing-container h1 { font-family: 'Roboto Mono', monospace; font-size: 3.5rem; color: var(--heading-color); border-right: .15em solid var(--primary-color); white-space: nowrap; overflow: hidden; margin: 0 auto; animation: typing 3.5s steps(30, end) forwards, blink-caret .75s step-end infinite; }
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--primary-color); } }
+.hero-subtitle { font-size: 1.25rem; margin: 2rem 0; opacity: 0; animation: fadeIn 1s ease 3.5s forwards; }
+.hero-button { background-color: transparent; color: var(--primary-color); padding: 1rem 2.5rem; border-radius: 4px; border: 1px solid var(--primary-color); text-decoration: none; font-weight: 700; font-size: 1rem; transition: background-color 0.3s ease, color 0.3s ease; opacity: 0; animation: fadeIn 1s ease 4s forwards; }
+.hero-button:hover { background-color: rgba(0, 255, 209, 0.1); }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-.hero-content { max-width: 800px; }
+/* 5. General Section Styling */
+.section-title { font-size: 2.5rem; color: var(--heading-color); margin-bottom: 3rem; text-align: center; }
 
-.typing-container h1 {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 3.5rem;
-    color: var(--heading-color);
-    font-weight: 700;
-    border-right: .15em solid var(--primary-color); /* The cursor */
-    white-space: nowrap; /* Keep it on one line */
-    overflow: hidden; /* Hide the text until animation plays */
-    margin: 0;
-    animation:
-        typing 3.5s steps(30, end),
-        blink-caret .75s step-end infinite;
-}
+/* 6. About & Education Section */
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; text-align: left; }
+.about-text h3 { font-size: 1.75rem; color: var(--heading-color); margin-bottom: 1rem; }
+.timeline { border-left: 2px solid #233554; padding-left: 2rem; }
+.timeline-item { position: relative; margin-bottom: 2rem; }
+.timeline-item::before { content: ''; position: absolute; left: -2.75rem; top: 0.25rem; width: 1rem; height: 1rem; border-radius: 50%; background-color: var(--primary-color); }
+.timeline-content h4 { margin: 0 0 0.25rem; color: var(--heading-color); }
+.timeline-content p { margin: 0; font-size: 0.9rem; }
 
-/* Typing animation */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
-
-/* Cursor blink animation */
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: var(--primary-color); }
-}
-
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin: 2rem 0;
-    opacity: 0; /* Fade in after typing */
-    animation: fadeIn 1s ease 3.5s forwards;
-}
-
-.hero-button {
-    background-color: transparent;
-    color: var(--primary-color);
-    padding: 1rem 2.5rem;
-    border-radius: 4px;
-    border: 1px solid var(--primary-color);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    opacity: 0; /* Fade in after typing */
-    animation: fadeIn 1s ease 4s forwards;
-}
-
-.hero-button:hover {
-    background-color: var(--primary-color);
-    color: var(--background-color);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 4. Section Styling */
-.about-section, .projects-section {
-    padding: 6rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-section h2, .projects-section h2, footer h2 {
-    font-size: 2.5rem;
-    color: var(--heading-color);
-    margin-bottom: 3rem;
-}
-
-/* 5. Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    text-align: left;
-}
-
-.skill-card {
-    background: var(--card-color);
-    padding: 2rem;
-    border-radius: 8px;
-    border: 1px solid #1E2D42;
-    transition: transform 0.3s ease;
-}
-
-.skill-card:hover {
-    transform: translateY(-5px);
-}
-
-.skill-card h4 {
-    font-size: 1.25rem;
-    color: var(--heading-color);
-    margin: 0 0 0.5rem;
-}
-
-/* 6. Projects Section */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 1.5rem;
-}
-
-.project-card {
-    background-color: var(--card-color);
-    border-radius: 8px;
-    text-align: left;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    border: 1px solid #1E2D42;
-}
-
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
-}
-
+/* 7. Skills, Projects, Achievements Sections */
+.skills-grid, .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+.skill-card { background: var(--card-color); padding: 2rem; border-radius: 8px; border: 1px solid #1E2D42; }
+.skill-card h4 { font-size: 1.25rem; color: var(--heading-color); margin: 0 0 0.5rem; }
+.project-card { background-color: var(--card-color); border-radius: 8px; text-align: left; box-shadow: var(--card-shadow); transition: transform 0.3s ease, box-shadow 0.3s ease; overflow: hidden; border: 1px solid #1E2D42; }
+.project-card:hover { transform: translateY(-8px); }
 .project-info { padding: 2rem; }
 .project-tag { display: inline-block; background-color: rgba(0, 255, 209, 0.1); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
 .project-card h3 { margin: 0 0 0.5rem; font-size: 1.5rem; color: var(--heading-color); }
 .project-card p { color: #a8b2d1; margin-bottom: 1.5rem; }
 .project-card a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
-.project-card a:hover { color: var(--primary-hover); }
+.achievements-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; text-align: left; }
+.achievements-column h3 { font-size: 1.5rem; color: var(--heading-color); margin-bottom: 1rem; border-bottom: 1px solid #233554; padding-bottom: 0.5rem; }
+.achievements-column ul { list-style: none; padding-left: 0; }
+.achievements-column ul li { margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative; }
+.achievements-column ul li::before { content: '▹'; position: absolute; left: 0; color: var(--primary-color); }
 
-/* 7. Footer */
-footer {
-    background-color: transparent;
-    text-align: center;
-    padding: 4rem 2rem;
-}
-
+/* 8. Footer */
+footer { text-align: center; padding: 4rem 2rem; }
 footer h2 { color: var(--heading-color); }
 footer p { margin: 0.5rem 0; max-width: 500px; margin-left: auto; margin-right: auto; }
 footer p strong { color: var(--heading-color); font-weight: 600; }
@@ -202,14 +96,11 @@ footer .social-links { margin-top: 2rem; }
 footer .social-links a { color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s ease; }
 footer .social-links a:hover { color: var(--primary-color); }
 
-/* Case Study Page (to ensure it looks good in dark mode) */
-.case-study {
-    background-color: var(--card-color);
-    border: 1px solid #1E2D42;
-}
+/* 9. Case Study Page Dark Mode Fix */
+.case-study { background-color: var(--card-color); border: 1px solid #1E2D42; }
 .case-study-header { border-bottom: 1px solid #1E2D42; }
 .case-study-header h1 { color: var(--heading-color); }
-.case-study-content h2 { border-bottom: 2px solid var(--primary-color); }
+.case-study-content h2 { border-bottom: 2px solid var(--primary-color); color: var(--heading-color);}
 .case-study-content h3 { color: var(--heading-color); }
 .features-list li { background-color: var(--background-color); border-left: 4px solid var(--primary-color); }
 .features-list li strong { color: var(--heading-color); }
