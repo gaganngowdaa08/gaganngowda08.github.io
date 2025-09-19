@@ -1,31 +1,31 @@
-/* --- NEW & IMPROVED PORTFOLIO STYLES --- */
+/* --- NEW "HACKER THEME" PORTFOLIO STYLES --- */
 
-/* 1. Global Styles & Variables */
+/* 1. Global Styles & Dark Mode Variables */
 :root {
-    --primary-color: #6366F1; /* A modern indigo */
-    --primary-hover: #4F46E5;
-    --dark-color: #111827; /* A deep gray for text */
-    --light-gray: #F3F4F6;
-    --text-color: #374151;
-    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --primary-color: #00FFD1; /* A bright, techy cyan/green */
+    --primary-hover: #ffffff;
+    --background-color: #0A192F; /* A deep navy blue */
+    --card-color: #112240;
+    --text-color: #ccd6f6;
+    --heading-color: #ffffff;
+    --card-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.7);
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto Mono', monospace; /* New monospace font */
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.7;
-    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+    -webkit-font-smoothing: antialiased;
 }
 
 /* 2. Header & Navigation */
 header {
-    background-color: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background-color: rgba(10, 25, 47, 0.85); /* Dark, semi-transparent */
+    backdrop-filter: blur(10px);
     padding: 1rem 5%;
-    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -40,73 +40,83 @@ nav {
 }
 
 nav .logo {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: var(--heading-color);
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+nav ul li { margin-left: 2.5rem; }
+nav ul li a { text-decoration: none; color: var(--text-color); font-weight: 400; transition: color 0.3s ease; }
+nav ul li a:hover { color: var(--primary-color); }
 
-nav ul li {
-    margin-left: 2.5rem;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-    color: var(--primary-color);
-}
-
-/* 3. Hero Section */
+/* 3. Hero Section & Typing Animation */
 .hero {
-    text-align: center;
-    padding: 8rem 2rem;
-    background-color: var(--light-gray);
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 90vh; /* Make it take up most of the screen */
+    padding: 0 2rem;
+    text-align: left;
 }
 
-.hero-content {
-    max-width: 700px;
-}
+.hero-content { max-width: 800px; }
 
-.hero h1 {
+.typing-container h1 {
+    font-family: 'Roboto Mono', monospace;
     font-size: 3.5rem;
+    color: var(--heading-color);
     font-weight: 700;
-    color: var(--dark-color);
-    margin: 0 0 1rem;
+    border-right: .15em solid var(--primary-color); /* The cursor */
+    white-space: nowrap; /* Keep it on one line */
+    overflow: hidden; /* Hide the text until animation plays */
+    margin: 0;
+    animation:
+        typing 3.5s steps(30, end),
+        blink-caret .75s step-end infinite;
 }
 
-.hero p {
+/* Typing animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+/* Cursor blink animation */
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--primary-color); }
+}
+
+.hero-subtitle {
     font-size: 1.25rem;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
+    opacity: 0; /* Fade in after typing */
+    animation: fadeIn 1s ease 3.5s forwards;
 }
 
 .hero-button {
-    background-color: var(--primary-color);
-    color: #fff;
+    background-color: transparent;
+    color: var(--primary-color);
     padding: 1rem 2.5rem;
-    border-radius: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--primary-color);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    opacity: 0; /* Fade in after typing */
+    animation: fadeIn 1s ease 4s forwards;
 }
 
 .hero-button:hover {
-    background-color: var(--primary-hover);
-    transform: translateY(-2px);
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* 4. Section Styling */
@@ -119,7 +129,7 @@ nav ul li a:hover {
 
 .about-section h2, .projects-section h2, footer h2 {
     font-size: 2.5rem;
-    color: var(--dark-color);
+    color: var(--heading-color);
     margin-bottom: 3rem;
 }
 
@@ -127,20 +137,25 @@ nav ul li a:hover {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: left;
 }
 
 .skill-card {
-    background: #fff;
+    background: var(--card-color);
     padding: 2rem;
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    border: 1px solid #1E2D42;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
 }
 
 .skill-card h4 {
     font-size: 1.25rem;
-    color: var(--dark-color);
+    color: var(--heading-color);
     margin: 0 0 0.5rem;
 }
 
@@ -148,96 +163,53 @@ nav ul li a:hover {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .project-card {
-    background-color: #fff;
-    border-radius: 12px;
+    background-color: var(--card-color);
+    border-radius: 8px;
     text-align: left;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden; /* Important for styling */
-    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    border: 1px solid #1E2D42;
 }
 
 .project-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-.project-info {
-    padding: 2rem;
-}
-
-.project-tag {
-    display: inline-block;
-    background-color: #e0e7ff;
-    color: var(--primary-color);
-    padding: 0.25rem 0.75rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.project-card h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-    color: var(--dark-color);
-}
-
-.project-card p {
-    color: #6b7280;
-    margin-bottom: 1.5rem;
-}
-
-.project-card a {
-    text-decoration: none;
-    color: var(--primary-color);
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-.project-card a:hover {
-    color: var(--primary-hover);
-}
+.project-info { padding: 2rem; }
+.project-tag { display: inline-block; background-color: rgba(0, 255, 209, 0.1); color: var(--primary-color); padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+.project-card h3 { margin: 0 0 0.5rem; font-size: 1.5rem; color: var(--heading-color); }
+.project-card p { color: #a8b2d1; margin-bottom: 1.5rem; }
+.project-card a { text-decoration: none; color: var(--primary-color); font-weight: 700; transition: color 0.3s ease; }
+.project-card a:hover { color: var(--primary-hover); }
 
 /* 7. Footer */
 footer {
-    background-color: var(--dark-color);
-    color: #9ca3af;
+    background-color: transparent;
     text-align: center;
     padding: 4rem 2rem;
 }
 
-footer h2 {
-    color: #fff;
-}
+footer h2 { color: var(--heading-color); }
+footer p { margin: 0.5rem 0; max-width: 500px; margin-left: auto; margin-right: auto; }
+footer p strong { color: var(--heading-color); font-weight: 600; }
+footer .social-links { margin-top: 2rem; }
+footer .social-links a { color: var(--text-color); text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s ease; }
+footer .social-links a:hover { color: var(--primary-color); }
 
-footer p {
-    margin: 0.5rem 0;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+/* Case Study Page (to ensure it looks good in dark mode) */
+.case-study {
+    background-color: var(--card-color);
+    border: 1px solid #1E2D42;
 }
-footer p strong {
-    color: #fff;
-    font-weight: 600;
-}
-
-footer .social-links {
-    margin-top: 2rem;
-}
-
-footer .social-links a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 1rem;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-footer .social-links a:hover {
-    color: var(--primary-color);
-}
+.case-study-header { border-bottom: 1px solid #1E2D42; }
+.case-study-header h1 { color: var(--heading-color); }
+.case-study-content h2 { border-bottom: 2px solid var(--primary-color); }
+.case-study-content h3 { color: var(--heading-color); }
+.features-list li { background-color: var(--background-color); border-left: 4px solid var(--primary-color); }
+.features-list li strong { color: var(--heading-color); }
