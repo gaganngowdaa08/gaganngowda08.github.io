@@ -1,18 +1,31 @@
-/* General Body Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
+/* --- NEW & IMPROVED PORTFOLIO STYLES --- */
+
+/* 1. Global Styles & Variables */
+:root {
+    --primary-color: #6366F1; /* A modern indigo */
+    --primary-hover: #4F46E5;
+    --dark-color: #111827; /* A deep gray for text */
+    --light-gray: #F3F4F6;
+    --text-color: #374151;
+    --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* Header and Navigation */
-header {
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: #fff;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #ddd;
+    color: var(--text-color);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased; /* Smoother fonts */
+}
+
+/* 2. Header & Navigation */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    padding: 1rem 5%;
+    border-bottom: 1px solid #e5e7eb;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,12 +35,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 nav .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333;
+    color: var(--dark-color);
 }
 
 nav ul {
@@ -38,264 +53,191 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 2rem;
+    margin-left: 2.5rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #555;
+    color: var(--text-color);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #007bff;
+    color: var(--primary-color);
 }
 
-/* Hero Section */
+/* 3. Hero Section */
 .hero {
     text-align: center;
-    padding: 6rem 2rem;
-    background: linear-gradient(45deg, #eef7ff, #ffffff);
-    border-bottom: 1px solid #ddd;
+    padding: 8rem 2rem;
+    background-color: var(--light-gray);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 700px;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0 0 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #666;
-}
-
-/* Projects Section */
-.projects-section {
-    padding: 4rem 2rem;
-    text-align: center;
-}
-
-.projects-section h2 {
-    font-size: 2.5rem;
+    font-size: 1.25rem;
     margin-bottom: 2rem;
 }
 
+.hero-button {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.hero-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+/* 4. Section Styling */
+.about-section, .projects-section {
+    padding: 6rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-section h2, .projects-section h2, footer h2 {
+    font-size: 2.5rem;
+    color: var(--dark-color);
+    margin-bottom: 3rem;
+}
+
+/* 5. Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    text-align: left;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+.skill-card h4 {
+    font-size: 1.25rem;
+    color: var(--dark-color);
+    margin: 0 0 0.5rem;
+}
+
+/* 6. Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .project-card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 2rem;
+    border-radius: 12px;
     text-align: left;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Important for styling */
+    border: 1px solid #e5e7eb;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.project-info {
+    padding: 2rem;
+}
+
+.project-tag {
+    display: inline-block;
+    background-color: #e0e7ff;
+    color: var(--primary-color);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .project-card h3 {
-    margin-top: 0;
+    margin: 0 0 0.5rem;
     font-size: 1.5rem;
+    color: var(--dark-color);
 }
 
 .project-card p {
-    color: #666;
+    color: #6b7280;
     margin-bottom: 1.5rem;
 }
 
 .project-card a {
     text-decoration: none;
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 5px;
+    color: var(--primary-color);
     font-weight: 600;
-    display: inline-block;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 .project-card a:hover {
-    background-color: #0056b3;
+    color: var(--primary-hover);
 }
 
-/* Footer */
+/* 7. Footer */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--dark-color);
+    color: #9ca3af;
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
+}
+
+footer h2 {
+    color: #fff;
 }
 
 footer p {
     margin: 0.5rem 0;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer p strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer .social-links {
+    margin-top: 2rem;
 }
 
 footer .social-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 0.5rem;
-    font-weight: 600;
-}
-
-footer .social-links a:hover {
-    text-decoration: underline;
-}
-/* Case Study Page Specific Styles */
-.case-study {
-    max-width: 900px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.case-study-header {
-    text-align: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 2rem;
-    margin-bottom: 2rem;
-}
-
-.case-study-header h1 {
-    font-size: 3rem;
-    margin-bottom: 0.5rem;
-}
-
-.case-study-header .tagline {
-    font-size: 1.2rem;
-    color: #666;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.case-study-content .content-section {
-    margin-bottom: 2.5rem;
-}
-
-.case-study-content h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid #007bff;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.case-study-content h3 {
-    font-size: 1.5rem;
-    color: #333;
-}
-
-.case-study-content p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* Make the logo on the project page a link */
-nav .logo a {
-    text-decoration: none;
-    color: #333;
-}
-/* Styles for the project image gallery */
-.image-gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.image-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-/* Styles for the Final Project Case Study */
-.features-list {
-    list-style: none;
-    padding-left: 0;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
-
-.features-list li {
-    background-color: #f9f9f9;
-    padding: 1rem;
-    border-left: 4px solid #007bff;
-    border-radius: 4px;
-}
-
-.features-list li strong {
-    display: block;
-    margin-bottom: 0.25rem;
-    color: #333;
-}
-
-.final-project-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-}
-
-.final-project-gallery img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-/* --- DESIGN UPGRADE CODE --- */
-
-/* Fade-in animation for the whole page */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-body {
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-/* Smoother hover effect for nav links */
-nav ul li a {
-    position: relative;
-    text-decoration: none;
-    color: #555;
+    margin: 0 1rem;
     font-weight: 600;
     transition: color 0.3s ease;
 }
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: -4px;
-    left: 0;
-    background-color: #007bff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-}
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
 
-/* Add a subtle glow to project cards on hover */
-.project-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+footer .social-links a:hover {
+    color: var(--primary-color);
 }
