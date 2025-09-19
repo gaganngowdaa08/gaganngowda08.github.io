@@ -30,28 +30,28 @@
             <div class="content-section">
                 <h2>The Problem</h2>
                 <p>
-                    [cite_start]The objective was to complete a technical assignment that required the development of a fully automated, Dockerized data pipeline. [cite: 147] [cite_start]The system needed to fetch stock market data from a public API on a regular schedule, parse the data, and reliably store it in a PostgreSQL database. [cite: 148, 150, 151] [cite_start]The project emphasized robustness, requiring comprehensive error handling, scalability, and secure management of credentials. [cite: 152, 162, 163]
+                    The objective was to complete a technical assignment that required the development of a fully automated, Dockerized data pipeline. The system needed to fetch stock market data from a public API on a regular schedule, parse the data, and reliably store it in a PostgreSQL database. [cite_start]The project emphasized robustness, requiring comprehensive error handling, scalability, and secure management of credentials. [cite: 103, 104, 106, 107]
                 </p>
             </div>
 
             <div class="content-section">
                 <h3>My Role</h3>
                 <p>
-                    DAG development, pipeline integration, and Dockerization.
+                    [cite_start]DAG development, pipeline integration, and Dockerization. [cite: 164]
                 </p>
             </div>
 
             <div class="content-section">
                 <h3>Technologies Used</h3>
                 <p>
-                    Python, Airflow, PostgreSQL, Docker, Git/GitHub.
+                    [cite_start]Python, Airflow, PostgreSQL, Docker, Git/GitHub. [cite: 165]
                 </p>
             </div>
 
             <div class="content-section">
                 <h2>The Process & Solution</h2>
                 <p>
-                    [cite_start]To meet the assignment's requirements, I chose to use Apache Airflow as the data orchestrator. [cite: 156] [cite_start]The entire pipeline, including Airflow and a PostgreSQL database, was containerized using Docker Compose for seamless, single-command deployment. [cite: 155] The core logic was encapsulated in an Airflow DAG named <code>stock_data_pipeline</code>, scheduled to run hourly. This DAG utilized a <code>PythonOperator</code> to execute a script that handled the full ETL process: fetching JSON data from the <strong>Alpha Vantage API</strong>, parsing the relevant information, and storing it in the PostgreSQL database. To ensure robustness, I added error handling using <strong>try-except blocks</strong> in the data fetching script to gracefully catch any API or database issues. I also utilized Airflow’s built-in retry mechanism, setting tasks to automatically <strong>retry once on temporary failures</strong>. [cite_start]All sensitive information, such as API keys and database credentials, was securely managed using environment variables. [cite: 162]
+                    To meet the assignment's requirements, I chose to use Apache Airflow as the data orchestrator. The entire pipeline, including Airflow and a PostgreSQL database, was containerized using Docker Compose for seamless, single-command deployment. The core logic was encapsulated in an Airflow DAG named <code>stock_data_pipeline</code>, scheduled to run hourly. This DAG utilized a <code>PythonOperator</code> to execute a script that handled the full ETL process: fetching JSON data from the <strong>Alpha Vantage API</strong>, parsing the relevant information, and storing it in the PostgreSQL database. To ensure robustness, I added error handling using <strong>try-except blocks</strong> in the data fetching script to gracefully catch any API or database issues. I also utilized Airflow’s built-in retry mechanism, setting tasks to automatically <strong>retry once on temporary failures</strong>. All sensitive information, such as API keys and database credentials, was securely managed using environment variables.
                 </p>
                  <div class="content-section">
                 <h3>The Challenge</h3>
@@ -63,14 +63,18 @@
              <div class="content-section">
                 <h2>The Outcome</h2>
                 <p>
-                    The project was a complete success. [cite_start]I delivered a fully functional and automated data pipeline that met all the technical specifications of the assignment. [cite: 174, 179] [cite_start]The final solution demonstrated proficiency in modern data engineering tools like Docker and Airflow, as well as the ability to write clean, resilient, and production-ready code. [cite: 178]
+                    The project was a complete success. I delivered a fully functional and automated data pipeline that met all the technical specifications of the assignment. The final solution demonstrated proficiency in modern data engineering tools like Docker and Airflow, as well as the ability to write clean, resilient, and production-ready code.
                 </p>
+                <div class="image-gallery">
+                    <img src="airflow-dashboard.png" alt="Airflow dashboard showing the active data pipeline DAG">
+                    <img src="airflow-dag-graph.png" alt="Airflow graph view showing the pipeline's single task">
+                </div>
             </div>
         </div>
     </main>
 
     <footer id="contact">
-        <p>Get in touch: gaganngowdaa08@gmail.com</p>
+        [cite_start]<p>Get in touch: gaganngowdaa08@gmail.com [cite: 137]</p>
     </footer>
 
 </body>
