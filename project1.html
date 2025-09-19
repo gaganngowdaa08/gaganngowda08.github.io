@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Case Study: PhytoDetect AI</title>
+    <title>Case Study: GrapeCare AI</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,44 +22,60 @@
 
     <main class="case-study">
         <div class="case-study-header">
-            <h1>PhytoDetect AI (Vitis Vinifera)</h1>
-            <p class="tagline">A deep learning-based grape plant disease detection system with an integrated multilingual NLP chatbot for farmer support, deployed on the cloud for real-time accessibility.</p>
+            <h1>GrapeCare: An AI-Powered Grape Disease Detector & Farmer Assistant</h1>
+            <p class="tagline">A comprehensive, multilingual web application that leverages deep learning to provide instant grape leaf disease diagnosis and an AI chatbot to offer agricultural advice.</p>
         </div>
 
         <div class="case-study-content">
+
             <div class="content-section">
                 <h2>The Problem</h2>
                 <p>
-                    [Your text about the problem goes here. Explain the challenges farmers face and why this tool is important.]
+                    Grape farming is a significant agricultural sector, but crops are highly susceptible to diseases like Black Rot, ESCA, and Leaf Blight. Early and accurate detection is crucial to prevent crop loss, but this often requires expert knowledge that may not be readily available to all farmers. Furthermore, language can be a barrier to accessing technical information. This project aimed to solve this by creating an accessible, easy-to-use tool for farmers to instantly diagnose diseases and get advice.
                 </p>
             </div>
 
             <div class="content-section">
                 <h3>My Role</h3>
                 <p>
-                    [cite_start]Model integration, backend development, and deployment. [cite: 35]
+                    This was my final year major project. My role encompassed the full project lifecycle, from developing the deep learning model to building and deploying the full-stack web application, including the front-end UI and the back-end AI chatbot integration.
                 </p>
             </div>
 
             <div class="content-section">
-                <h3>Technologies Used</h3>
+                <h2>Key Features</h2>
+                <ul class="features-list">
+                    <li><strong>Instant Disease Diagnosis:</strong> Upload a grape leaf image to get an immediate diagnosis with a high accuracy score.</li>
+                    <li><strong>Deep Learning Model:</strong> Built using a Transfer Learning approach with TensorFlow and Keras.</li>
+                    <li><strong>Multilingual Web App:</strong> A user-friendly interface that works in both English and Kannada.</li>
+                    <li><strong>AI Chatbot Assistant:</strong> An integrated "GrapeCare Assistant" to answer farmer's questions.</li>
+                    <li><strong>Explainable AI (XAI):</strong> Used Grad-CAM to visualize which parts of the leaf image the model focused on, ensuring model transparency.</li>
+                </ul>
+            </div>
+
+            <div class="content-section">
+                <h2>The Technical Process</h2>
                 <p>
-                    [cite_start]Python, Flask, TensorFlow/Keras, HTML, CSS, JavaScript, Render, GitHub. [cite: 36]
+                    The core of the application is a Convolutional Neural Network (CNN) built with TensorFlow and Keras. I used a Transfer Learning approach, leveraging a pre-trained MobileNetV2 model and fine-tuning it on a dataset of grape leaf images across four classes (Black Rot, ESCA, Leaf Blight, and Healthy). The model was trained using callbacks like <code>EarlyStopping</code> and <code>ModelCheckpoint</code> to ensure efficiency and prevent overfitting.
+                </p>
+                <p>
+                    The trained model was then integrated into a Flask web application. The front-end, named "GrapeCare," allows users to upload an image, which is processed by the model in the backend. The application displays the predicted disease, the model's confidence, and a recommended course of action. To further assist farmers, I integrated a multilingual AI chatbot that provides tips and answers to common questions.
                 </p>
             </div>
 
             <div class="content-section">
-                <h2>The Process & Solution</h2>
+                <h2>Model Performance & Explainability</h2>
                 <p>
-                    [This is the most important part. Your detailed story goes here. Explain how you built the CNN model, the Flask backend, the NLP chatbot, and any challenges you overcame.]
+                    The final model achieved a validation accuracy of over 97%. The high performance is visually demonstrated by the training plots, confusion matrix, and ROC curve. To ensure the model was not just guessing, I implemented Grad-CAM, an explainability technique that creates a heatmap to show which pixels were most important for a given prediction. This confirms the model is correctly identifying diseased areas on the leaves.
                 </p>
-            </div>
-
-            <div class="content-section">
-                <h2>The Outcome</h2>
-                <p>
-                    [Your text about the final result goes here. Was the project a success? What was the final product? Is there a live link?]
-                </p>
+                <div class="final-project-gallery">
+                    <img src="grapecare-ui.png" alt="Main user interface of the GrapeCare web application">
+                    <img src="grapecare-result.png" alt="A successful 'Healthy' diagnosis result with accuracy pie chart">
+                    <img src="grapecare-plots.png" alt="Training and validation accuracy and loss plots">
+                    <img src="grapecare-matrix.png" alt="Confusion matrix showing high accuracy across all four classes">
+                    <img src="grapecare-roc.png" alt="ROC Curve and AUC scores demonstrating excellent model performance">
+                    <img src="grapecare-gradcam.png" alt="Grad-CAM visualizations showing model's focus on diseased leaf parts">
+                </div>
             </div>
         </div>
     </main>
