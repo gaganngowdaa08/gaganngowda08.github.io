@@ -220,3 +220,39 @@ nav .logo a {
     border-radius: 8px;
     border: 1px solid #ddd;
 }
+/* Styles for the Final Project Case Study */
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.features-list li {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-left: 4px solid #007bff;
+    border-radius: 4px;
+}
+
+.features-list li strong {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: #333;
+}
+
+.final-project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.final-project-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
