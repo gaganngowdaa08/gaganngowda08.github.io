@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo"><a href="index.html">Gagan Gowda BG</a></div>
+            <div class="logo"><a href="index.html" style="text-decoration:none; color: inherit;">Gagan Gowda BG</a></div>
             <ul>
                 <li><a href="index.html#projects">Back to Projects</a></li>
             </ul>
@@ -27,21 +27,14 @@
         </div>
 
         <div class="case-study-content">
-
             <div class="content-section">
                 <h2>The Problem</h2>
-                <p>
-                    Grape farming is a significant agricultural sector, but crops are highly susceptible to diseases like Black Rot, ESCA, and Leaf Blight. Early and accurate detection is crucial to prevent crop loss, but this often requires expert knowledge that may not be readily available to all farmers. Furthermore, language can be a barrier to accessing technical information. This project aimed to solve this by creating an accessible, easy-to-use tool for farmers to instantly diagnose diseases and get advice.
-                </p>
+                <p>Grape farming is a significant agricultural sector, but crops are highly susceptible to diseases like Black Rot, ESCA, and Leaf Blight. Early and accurate detection is crucial to prevent crop loss, but this often requires expert knowledge that may not be readily available to all farmers. Furthermore, language can be a barrier to accessing technical information. This project aimed to solve this by creating an accessible, easy-to-use tool for farmers to instantly diagnose diseases and get advice.</p>
             </div>
-
             <div class="content-section">
                 <h3>My Role</h3>
-                <p>
-                    This was my final year major project. My role encompassed the full project lifecycle, from developing the deep learning model to building and deploying the full-stack web application, including the front-end UI and the back-end AI chatbot integration.
-                </p>
+                <p>This was my final year major project. My role encompassed the full project lifecycle, from developing the deep learning model to building and deploying the full-stack web application, including the front-end UI and the back-end AI chatbot integration.</p>
             </div>
-
             <div class="content-section">
                 <h2>Key Features</h2>
                 <ul class="features-list">
@@ -52,22 +45,14 @@
                     <li><strong>Explainable AI (XAI):</strong> Used Grad-CAM to visualize which parts of the leaf image the model focused on, ensuring model transparency.</li>
                 </ul>
             </div>
-
             <div class="content-section">
                 <h2>The Technical Process</h2>
-                <p>
-                    The core of the application is a Convolutional Neural Network (CNN) built with TensorFlow and Keras. I used a Transfer Learning approach, leveraging a pre-trained MobileNetV2 model and fine-tuning it on a dataset of grape leaf images across four classes (Black Rot, ESCA, Leaf Blight, and Healthy). The model was trained using callbacks like <code>EarlyStopping</code> and <code>ModelCheckpoint</code> to ensure efficiency and prevent overfitting.
-                </p>
-                <p>
-                    The trained model was then integrated into a Flask web application. The front-end, named "GrapeCare," allows users to upload an image, which is processed by the model in the backend. The application displays the predicted disease, the model's confidence, and a recommended course of action. To further assist farmers, I integrated a multilingual AI chatbot that provides tips and answers to common questions.
-                </p>
+                <p>The core of the application is a Convolutional Neural Network (CNN) built with TensorFlow and Keras. I used a Transfer Learning approach, leveraging a pre-trained MobileNetV2 model and fine-tuning it on a dataset of grape leaf images across four classes (Black Rot, ESCA, Leaf Blight, and Healthy). The model was trained using callbacks like <code>EarlyStopping</code> and <code>ModelCheckpoint</code> to ensure efficiency and prevent overfitting.</p>
+                <p>The trained model was then integrated into a Flask web application. The front-end, named "GrapeCare," allows users to upload an image, which is processed by the model in the backend. The application displays the predicted disease, the model's confidence, and a recommended course of action. To further assist farmers, I integrated a multilingual AI chatbot that provides tips and answers to common questions.</p>
             </div>
-
             <div class="content-section">
                 <h2>Model Performance & Explainability</h2>
-                <p>
-                    The final model achieved a validation accuracy of over 97%. The high performance is visually demonstrated by the training plots, confusion matrix, and ROC curve. To ensure the model was not just guessing, I implemented Grad-CAM, an explainability technique that creates a heatmap to show which pixels were most important for a given prediction. This confirms the model is correctly identifying diseased areas on the leaves.
-                </p>
+                <p>The final model achieved a validation accuracy of over 97%. The high performance is visually demonstrated by the training plots, confusion matrix, and ROC curve. To ensure the model was not just guessing, I implemented Grad-CAM, an explainability technique that creates a heatmap to show which pixels were most important for a given prediction. This confirms the model is correctly identifying diseased areas on the leaves.</p>
                 <div class="final-project-gallery">
                     <img src="grapecare-ui.png" alt="Main user interface of the GrapeCare web application">
                     <img src="grapecare-result.png" alt="A successful 'Healthy' diagnosis result with accuracy pie chart">
@@ -80,8 +65,8 @@
         </div>
     </main>
 
-    <footer id="contact">
-        <p>Get in touch: gaganngowdaa08@gmail.com</p>
+    <footer id="contact" style="background: #fff; border-top: 1px solid var(--border-color);">
+        <p style="color: var(--text-color);">Gagan Gowda BG | 2025</p>
     </footer>
 
 </body>
