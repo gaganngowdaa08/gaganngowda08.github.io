@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -15,16 +15,37 @@
         <nav>
             <div class="logo">Gagan Gowda BG</div>
             <ul>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="Gagan_Gowda_Resume.pdf" target="_blank">Resume</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Aspiring Data Science & AI Engineer</h1>
-        <p>Solving real-world problems through data-driven solutions and machine learning.</p>
+        <div class="hero-content">
+            <h1>AI & Data Science Engineer</h1>
+            <p>I build intelligent, data-driven solutions to solve real-world problems. Welcome to my portfolio.</p>
+            <a href="Gagan_Gowda_Resume.pdf" class="hero-button" target="_blank">View My Resume</a>
+        </div>
+    </section>
+    
+    <section id="about" class="about-section">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>AI & Machine Learning</h4>
+                <p>Developing and deploying deep learning models with TensorFlow & Keras for tasks like computer vision and NLP.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Data Engineering</h4>
+                <p>Building robust, automated ETL pipelines using tools like Apache Airflow, Docker, and PostgreSQL.</p>
+            </div>
+            <div class="skill-card">
+                <h4>Full-Stack Development</h4>
+                <p>Creating user-friendly web applications with Python, Flask, and modern front-end technologies (HTML, CSS, JS).</p>
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="projects-section">
@@ -32,29 +53,39 @@
         <div class="projects-grid">
 
             <div class="project-card">
-                <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
-                <p>My final year major project. A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
-                <a href="project1.html">View Case Study</a>
+                <div class="project-info">
+                    <span class="project-tag">Major Project</span>
+                    <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
+                    <p>A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
+                    <a href="project1.html">View Case Study</a>
+                </div>
             </div>
 
             <div class="project-card">
-                <h3>Dockerized Stock Data Pipeline</h3>
-                <p>A containerized ETL pipeline built with Apache Airflow to fetch stock data and store it in PostgreSQL, completed as a technical assignment.</p>
-                <a href="project2.html">View Case Study</a>
+                 <div class="project-info">
+                    <span class="project-tag">Technical Assignment</span>
+                    <h3>Dockerized Stock Data Pipeline</h3>
+                    <p>A containerized ETL pipeline with Apache Airflow to fetch stock data and store it in PostgreSQL.</p>
+                    <a href="project2.html">View Case Study</a>
+                </div>
             </div>
 
             <div class="project-card">
-                <h3>Colour-Based Object Sorting System</h3>
-                <p>A hardware prototype using Python, OpenCV, and Arduino for automated color-based sorting, demonstrating hardware-software integration.</p>
-                <a href="project3.html">View Case Study</a>
+                 <div class="project-info">
+                    <span class="project-tag">Hardware & IoT</span>
+                    <h3>Colour-Based Object Sorting System</h3>
+                    <p>A prototype using Python, OpenCV, and Arduino for automated color-based sorting.</p>
+                    <a href="project3.html">View Case Study</a>
+                </div>
             </div>
 
         </div>
     </section>
 
     <footer id="contact">
-        <p>Get in touch:</p>
-        <p>gaganngowdaa08@gmail.com</p>
+        <h2>Let's Connect</h2>
+        <p>I'm currently seeking new opportunities. Feel free to reach out!</p>
+        <p><strong>gaganngowdaa08@gmail.com</strong></p>
         <p>+91 9019598767</p>
         <div class="social-links">
             <a href="https://www.linkedin.com/in/gagan-gowda-1b63a22b4/" target="_blank">LinkedIn</a>
