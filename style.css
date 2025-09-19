@@ -1,10 +1,10 @@
-/* --- FINAL PORTFOLIO STYLES (V5.0 - HYBRID) --- */
+/* --- FINAL PORTFOLIO STYLES (V5.1 - with fixes) --- */
 
 :root {
     --bg-color: #FFFFFF;
     --text-color: #4B5563;
     --heading-color: #111827;
-    --accent-color: #6366F1; /* Switched to a professional indigo */
+    --accent-color: #6366F1;
     --border-color: #E5E7EB;
     --card-bg: #FFFFFF;
 }
@@ -18,10 +18,7 @@ body {
     line-height: 1.6;
 }
 
-/* Scroll Animation Setup */
-.content-section, .timeline-item, .skill-card, .project-card, .achievements-column, .contact-container {
-    visibility: hidden; /* Hide elements until animated */
-}
+.reveal-up { visibility: hidden; }
 
 /* Header & Navigation */
 header { background-color: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); padding: 1.5rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--border-color); }
@@ -35,58 +32,20 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .hamburger div { width: 25px; height: 2px; background-color: var(--heading-color); margin: 6px; transition: all 0.3s ease; }
 
 /* Hero Section with Background Image */
-.hero {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem 5%;
-    background-image: url('hero-pic.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-}
-
-.hero::before { /* Dark overlay for text readability */
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(17, 24, 39, 0.7); /* A semi-transparent dark gray/blue */
-}
-
-.hero-content {
-    position: relative; /* Sit on top of the overlay */
-    z-index: 2;
-    max-width: 800px;
-    text-align: center;
-}
-
-.typing-container {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 3.5rem;
-    font-weight: 700;
-    border-right: .15em solid var(--accent-color);
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 1rem auto;
-    animation: typing 3.5s steps(30, end) forwards, blink-caret .75s step-end infinite;
-    display: inline-block; /* Important for alignment */
-}
+.hero { position: relative; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem 5%; background-image: url('hero-pic.jpg'); background-size: cover; background-position: center; color: #fff; }
+.hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17, 24, 39, 0.7); }
+.hero-content { position: relative; z-index: 2; max-width: 1200px; text-align: center; }
+.hero-text { text-align: left; }
+.hero-intro { font-family: 'Roboto Mono', monospace; color: var(--accent-color); font-weight: 600; display: block; margin-bottom: 1rem; }
+.typing-container { display: inline-block; }
+.typing-container h1 { font-family: 'Roboto Mono', monospace; font-size: 3.5rem; font-weight: 700; border-right: .15em solid var(--accent-color); white-space: nowrap; overflow: hidden; margin: 0; animation: typing 3.5s steps(30, end) forwards, blink-caret .75s step-end infinite; }
 @keyframes typing { from { width: 0 } to { width: 100% } }
 @keyframes blink-caret { from, to { border-color: transparent } 50% { border-color: var(--accent-color); } }
-
-.hero-subtitle { font-size: 1.25rem; margin: 0 0 1.5rem; }
-.hero-contact-info { margin: 1.5rem 0; }
-.hero-contact-info p { margin: 0.5rem 0; font-family: 'Roboto Mono', monospace; }
-.hero-socials a { color: #fff; text-decoration: none; margin: 0 1rem; font-weight: 600; transition: color 0.3s ease; }
-.hero-socials a:hover { color: var(--accent-color); }
-
-.hero-button { background-color: var(--accent-color); color: #fff; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; margin-top: 1rem; transition: background-color 0.3s ease, transform 0.2s ease; }
+.hero-contact { font-family: 'Roboto Mono', monospace; font-size: 0.9rem; margin: 1.5rem 0 2.5rem; }
+.hero-socials a { color: #fff; text-decoration: none; margin: 0 1rem 0 0; font-weight: 600; }
+.hero-button { background-color: var(--accent-color); color: #fff; padding: 1rem 2.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 1rem; display: inline-block; margin-top: 2rem; transition: background-color 0.3s ease, transform 0.2s ease; }
 .hero-button:hover { background-color: #4F46E5; transform: translateY(-2px); }
+.hero-image { display: none; } /* We are using a background image now */
 
 /* Main Content Wrapper */
 .main-content { padding: 0 5%; max-width: 1200px; margin: 0 auto; }
@@ -103,10 +62,11 @@ nav { display: flex; justify-content: space-between; align-items: center; max-wi
 .timeline-content h4 { margin: 0 0 0.25rem; color: var(--heading-color); }
 .timeline-content p { margin: 0; font-size: 0.9rem; color: #555; }
 
-/* Skills Section */
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-.skill-card { background-color: #F9FAFB; border: 1px solid var(--border-color); padding: 2rem; border-radius: 12px; }
-.skill-card h4 { font-size: 1.25rem; color: var(--heading-color); margin: 0 0 0.5rem; }
+/* Skills Marquee */
+.marquee { width: 100vw; position: relative; left: 50%; transform: translateX(-50%); overflow: hidden; padding: 3rem 0; background-color: #fff; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+.marquee-content { display: flex; animation: marquee 30s linear infinite; }
+.marquee-content span { font-size: 2rem; font-weight: 800; color: var(--heading-color); padding: 0 2rem; white-space: nowrap; }
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
 /* Restored Project Card Design */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
@@ -134,10 +94,9 @@ footer { background-color: #F9FAFB; padding: 6rem 5%; border-top: 1px solid var(
 .contact-form button { background-color: var(--accent-color); color: #fff; padding: 1rem; border-radius: 8px; border: none; font-weight: 600; font-size: 1rem; cursor: pointer; }
 
 /* Responsive & Mobile Nav */
-@media (max-width: 900px) {
-    .hero-content { grid-template-columns: 1fr; }
-    .typing-container h1 { font-size: 2.5rem; }
-    .about-grid, .achievements-grid { grid-template-columns: 1fr; }
+@media screen and (max-width: 900px) {
+    .typing-container h1 { font-size: 2rem; /* Responsive font size fix */ }
+    .about-grid, .achievements-grid, .projects-grid { grid-template-columns: 1fr; }
     .contact-container { grid-template-columns: 1fr; }
     .nav-links { position: fixed; right: 0; top: 0; height: 100vh; background-color: var(--bg-color); flex-direction: column; align-items: center; justify-content: space-around; width: 60%; transform: translateX(100%); transition: transform 0.5s ease-in; }
     .nav-links.nav-active { transform: translateX(0%); }
@@ -148,5 +107,17 @@ footer { background-color: #F9FAFB; padding: 6rem 5%; border-top: 1px solid var(
     @keyframes navLinkFade { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
 }
 
-/* Case Study Page Fixes */
-.case-study { background-color: #fff; }
+/* Case Study Pages Styling */
+.case-study { background-color: #fff; max-width: 900px; margin: 2rem auto; padding: 2rem; border-radius: 8px; }
+.case-study-header { text-align: center; border-bottom: 1px solid var(--border-color); padding-bottom: 2rem; margin-bottom: 2rem; }
+.case-study-header h1 { font-size: 3rem; color: var(--heading-color); }
+.case-study-header .tagline { font-size: 1.2rem; max-width: 700px; margin: 1rem auto 0; }
+.case-study-content .content-section { margin-bottom: 2.5rem; }
+.case-study-content h2 { font-size: 2rem; border-bottom: 2px solid var(--accent-color); display: inline-block; padding-bottom: 0.5rem; margin-bottom: 1rem; color: var(--heading-color); }
+.case-study-content h3 { font-size: 1.5rem; color: var(--heading-color); }
+.features-list { list-style: none; padding-left: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.features-list li { background-color: #f9f9f9; padding: 1rem; border-left: 4px solid var(--accent-color); border-radius: 4px; }
+.final-project-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-top: 2rem; }
+.final-project-gallery img { width: 100%; border-radius: 8px; border: 1px solid var(--border-color); }
+.image-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem; }
+.image-gallery img { width: 100%; border-radius: 8px; border: 1px solid var(--border-color); }
