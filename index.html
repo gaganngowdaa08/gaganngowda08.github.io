@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,7 +16,9 @@
             <div class="logo">Gagan Gowda BG // Portfolio</div>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -27,42 +29,70 @@
             <div class="typing-container">
                 <h1>AI & Data Science Engineer</h1>
             </div>
-            <p class="hero-subtitle">I build intelligent, data-driven solutions to solve real-world problems.</p>
-            <a href="Gagan_Gowda_Resume.pdf" class="hero-button" target="_blank">View My Resume</a>
+            <p class="hero-subtitle">An aspiring Data Science professional with a strong foundation in Computer Science and a passion for solving real-world problems through AI. Fast learner with a structured mindset and solid analytical skills.</p>
+            <a href="Gagan_Gowda_Resume.pdf" class="hero-button" target="_blank">Download Resume</a>
         </div>
     </section>
-    
-    <section id="about" class="about-section">
-        <h2>My Skills</h2>
+
+    <section id="about" class="content-section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <h3>Education</h3>
+                <p>I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>, graduating in 2026. My academic journey has provided me with a solid analytical foundation and a deep passion for technology.</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>B.E, Computer Science And Engineering</h4>
+                        <p>KS Institute of Technology, Bangalore (Expected 2026)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>Pre-University</h4>
+                        <p>Sri Chaitanya PU College, Bengaluru (2022)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h4>SSLC</h4>
+                        <p>Sri Chaitanya Techno School, Bengaluru (2020)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="content-section">
+        <h2 class="section-title">Technical Skills</h2>
         <div class="skills-grid">
             <div class="skill-card">
-                <h4>AI & Machine Learning</h4>
-                <p>Developing and deploying deep learning models with TensorFlow & Keras for tasks like computer vision and NLP.</p>
+                <h4>Languages</h4>
+                <p>Python, Java (familiar), C (basic), JavaScript (learning)</p>
             </div>
             <div class="skill-card">
-                <h4>Data Engineering</h4>
-                <p>Building robust, automated ETL pipelines using tools like Apache Airflow, Docker, and PostgreSQL.</p>
+                <h4>Technologies</h4>
+                <p>SQL, Git, GitHub, Jupyter Notebook, TensorFlow/Keras, Flask, Airflow, Docker, OpenCV</p>
             </div>
-            <div class="skill-card">
-                <h4>Full-Stack Development</h4>
-                <p>Creating user-friendly web applications with Python, Flask, and modern front-end technologies (HTML, CSS, JS).</p>
+             <div class="skill-card">
+                <h4>Spoken Languages</h4>
+                <p>English (Proficient), Hindi, Kannada (Native), Telugu</p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects-section">
-        <h2>My Projects</h2>
+    <section id="projects" class="content-section">
+        <h2 class="section-title">Projects</h2>
         <div class="projects-grid">
-
             <div class="project-card">
                 <div class="project-info">
                     <span class="project-tag">Major Project</span>
                     <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
-                    <p>A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
+                    <p>My final year major project. A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
                     <a href="project1.html">View Case Study</a>
                 </div>
             </div>
-
             <div class="project-card">
                  <div class="project-info">
                     <span class="project-tag">Technical Assignment</span>
@@ -71,7 +101,6 @@
                     <a href="project2.html">View Case Study</a>
                 </div>
             </div>
-
             <div class="project-card">
                  <div class="project-info">
                     <span class="project-tag">Hardware & IoT</span>
@@ -80,7 +109,30 @@
                     <a href="project3.html">View Case Study</a>
                 </div>
             </div>
+        </div>
+    </section>
 
+    <section id="achievements" class="content-section">
+        <h2 class="section-title">Achievements & Certifications</h2>
+        <div class="achievements-grid">
+            <div class="achievements-column">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Volunteer in organizing Sentinel Hack 5.0</li>
+                    <li>Organizing Committee Member, The Great Bengaluru Hackathon - 2025</li>
+                    <li>Core Committee Member, College Fest Organization</li>
+                    <li>Division-Level Kabaddi Player</li>
+                </ul>
+            </div>
+            <div class="achievements-column">
+                <h3>Certifications</h3>
+                <ul>
+                    <li>Machine Learning Fundamentals (Infosys SpringBoard)</li>
+                    <li>Artificial Intelligence in Industrial and Management Engineering (NPTEL)</li>
+                    <li>100 Days of Code: The Complete Python Pro Bootcamp (Udemy)</li>
+                    <li>Programming Fundamentals using Python (Infosys SpringBoard)</li>
+                </ul>
+            </div>
         </div>
     </section>
 
