@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gagan Gowda BG | AI & Data Science Portfolio</title> <link rel="stylesheet" href="style.css">
+    <title>Gagan Gowda BG | AI & Data Science Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -12,14 +13,19 @@
 
     <header>
         <nav>
-            <div class="logo">Gagan Gowda BG // Portfolio</div>
-            <ul>
+            <div class="logo">Gagan Gowda BG</div>
+            <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#achievements">Achievements</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
         </nav>
     </header>
 
@@ -33,108 +39,110 @@
         </div>
     </section>
 
-    <section id="about" class="content-section">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-            <div class="about-text">
-                <img src="profile-pic.jpg" alt="Gagan Gowda" class="profile-pic">
-                <h3>Education</h3>
-                <p>I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>, graduating in 2026. My academic journey has provided me with a solid analytical foundation and a deep passion for technology.</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h4>B.E, Computer Science And Engineering</h4>
-                        <p>KS Institute of Technology, Bangalore (Expected 2026)</p>
+    <div class="main-content">
+        <section id="about" class="content-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <img src="profile-pic.jpg" alt="Gagan Gowda" class="profile-pic">
+                    <h3>Education</h3>
+                    <p>I am pursuing my Bachelor of Engineering in Computer Science from the <strong>KS Institute of Technology, Bangalore</strong>, graduating in 2026. My academic journey has provided me with a solid analytical foundation and a deep passion for technology.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>B.E, Computer Science And Engineering</h4>
+                            <p>KS Institute of Technology, Bangalore (Expected 2026)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>Pre-University</h4>
+                            <p>Sri Chaitanya PU College, Bengaluru (2022)</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h4>SSLC</h4>
+                            <p>Sri Chaitanya Techno School, Bengaluru (2020)</p>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h4>Pre-University</h4>
-                        <p>Sri Chaitanya PU College, Bengaluru (2022)</p>
+            </div>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Languages</h4>
+                    <p>Python, Java (familiar), C (basic), JavaScript (learning)</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Technologies</h4>
+                    <p>SQL, Git, GitHub, Jupyter Notebook, TensorFlow/Keras, Flask, Airflow, Docker, OpenCV</p>
+                </div>
+                 <div class="skill-card">
+                    <h4>Spoken Languages</h4>
+                    <p>English (Proficient), Hindi, Kannada (Native), Telugu</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="content-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <span class="project-tag">Major Project</span>
+                        <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
+                        <p>My final year major project. A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
+                        <a href="project1.html">View Case Study</a>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h4>SSLC</h4>
-                        <p>Sri Chaitanya Techno School, Bengaluru (2020)</p>
+                <div class="project-card">
+                     <div class="project-info">
+                        <span class="project-tag">Technical Assignment</span>
+                        <h3>Dockerized Stock Data Pipeline</h3>
+                        <p>A containerized ETL pipeline with Apache Airflow to fetch stock data and store it in PostgreSQL.</p>
+                        <a href="project2.html">View Case Study</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                     <div class="project-info">
+                        <span class="project-tag">Hardware & IoT</span>
+                        <h3>Colour-Based Object Sorting System</h3>
+                        <p>A prototype using Python, OpenCV, and Arduino for automated color-based sorting.</p>
+                        <a href="project3.html">View Case Study</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills" class="content-section">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h4>Languages</h4>
-                <p>Python, Java (familiar), C (basic), JavaScript (learning)</p>
-            </div>
-            <div class="skill-card">
-                <h4>Technologies</h4>
-                <p>SQL, Git, GitHub, Jupyter Notebook, TensorFlow/Keras, Flask, Airflow, Docker, OpenCV</p>
-            </div>
-             <div class="skill-card">
-                <h4>Spoken Languages</h4>
-                <p>English (Proficient), Hindi, Kannada (Native), Telugu</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="content-section">
-        <h2 class="section-title">Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-info">
-                    <span class="project-tag">Major Project</span>
-                    <h3>GrapeCare: An AI-Powered Grape Disease Detector</h3>
-                    <p>My final year major project. A multilingual web app that uses a deep learning model to provide instant grape leaf disease diagnosis and AI chatbot support.</p>
-                    <a href="project1.html">View Case Study</a>
+        <section id="achievements" class="content-section">
+            <h2 class="section-title">Achievements & Certifications</h2>
+            <div class="achievements-grid">
+                <div class="achievements-column">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Volunteer in organizing Sentinel Hack 5.0</li>
+                        <li>Organizing Committee Member, The Great Bengaluru Hackathon - 2025</li>
+                        <li>Core Committee Member, College Fest Organization</li>
+                        <li>Division-Level Kabaddi Player</li>
+                    </ul>
+                </div>
+                <div class="achievements-column">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Machine Learning Fundamentals (Infosys SpringBoard)</li>
+                        <li>Artificial Intelligence in Industrial and Management Engineering (NPTEL)</li>
+                        <li>100 Days of Code: The Complete Python Pro Bootcamp (Udemy)</li>
+                        <li>Programming Fundamentals using Python (Infosys SpringBoard)</li>
+                    </ul>
                 </div>
             </div>
-            <div class="project-card">
-                 <div class="project-info">
-                    <span class="project-tag">Technical Assignment</span>
-                    <h3>Dockerized Stock Data Pipeline</h3>
-                    <p>A containerized ETL pipeline with Apache Airflow to fetch stock data and store it in PostgreSQL.</p>
-                    <a href="project2.html">View Case Study</a>
-                </div>
-            </div>
-            <div class="project-card">
-                 <div class="project-info">
-                    <span class="project-tag">Hardware & IoT</span>
-                    <h3>Colour-Based Object Sorting System</h3>
-                    <p>A prototype using Python, OpenCV, and Arduino for automated color-based sorting.</p>
-                    <a href="project3.html">View Case Study</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="achievements" class="content-section">
-        <h2 class="section-title">Achievements & Certifications</h2>
-        <div class="achievements-grid">
-            <div class="achievements-column">
-                <h3>Achievements</h3>
-                <ul>
-                    <li>Volunteer in organizing Sentinel Hack 5.0</li>
-                    <li>Organizing Committee Member, The Great Bengaluru Hackathon - 2025</li>
-                    <li>Core Committee Member, College Fest Organization</li>
-                    <li>Division-Level Kabaddi Player</li>
-                </ul>
-            </div>
-            <div class="achievements-column">
-                <h3>Certifications</h3>
-                <ul>
-                    <li>Machine Learning Fundamentals (Infosys SpringBoard)</li>
-                    <li>Artificial Intelligence in Industrial and Management Engineering (NPTEL)</li>
-                    <li>100 Days of Code: The Complete Python Pro Bootcamp (Udemy)</li>
-                    <li>Programming Fundamentals using Python (Infosys SpringBoard)</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <footer id="contact">
         <h2>Let's Connect</h2>
@@ -150,17 +158,35 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script>
+        const navSlide = () => {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav-links');
+            const navLinks = document.querySelectorAll('.nav-links li');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('nav-active');
+                hamburger.classList.toggle('toggle');
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    } else {
+                        link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
+                    }
+                });
+            });
+        }
+        navSlide();
+
         const sr = ScrollReveal({
             distance: '50px',
             duration: 1500,
             easing: 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
             reset: false
         });
-        sr.reveal('.section-title', { origin: 'top' });
-        sr.reveal('.about-text, .timeline', { origin: 'left' });
-        sr.reveal('.skill-card', { interval: 200 });
-        sr.reveal('.project-card', { interval: 200 });
-        sr.reveal('.achievements-column', { origin: 'bottom', interval: 200 });
+        sr.reveal('.section-title, .about-text, .timeline, .skill-card, .project-card, .achievements-column', {
+            origin: 'bottom',
+            interval: 100
+        });
     </script>
 </body>
 </html>
