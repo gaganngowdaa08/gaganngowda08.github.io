@@ -30,7 +30,7 @@
             <div class="content-section">
                 <h2>The Problem</h2>
                 <p>
-                    [Your text about the problem goes here. What is the challenge in manual sorting? What was the goal of creating an automated prototype?]
+                    [Traditional industrial sorting methods are often performed manually, which can lead to inefficiencies, human error, and reduced productivity. The challenge was to design and build an automated sorting machine that could efficiently categorize objects based on both color and the presence of metal. The primary goal was to create a system that enhances sorting accuracy and speed, thereby reducing the need for human intervention and improving operational efficiency in industries like recycling and manufacturing]
                 </p>
             </div>
 
@@ -51,13 +51,32 @@
             <div class="content-section">
                 <h2>The Process & Solution</h2>
                 <p>
-                    [This is the most important part for this project. Since you don't have the code, describe the logic. Explain how OpenCV detected colors, how the Python script communicated with the Arduino, and how the Arduino controlled the sorting mechanism. **This is the perfect place to include a diagram or flowchart you create.**]
+                    [We developed a proof-of-concept prototype controlled by an 
+
+Arduino Uno board. The system integrates multiple sensors to achieve its sorting goals.
+
+For color identification, a 
+
+TCS3200 Color Sensor was used to detect the specific RGB (Red, Green, Blue) values of an object placed in the sorting area. To detect metallic objects, an 
+
+Inductive Proximity Sensor was incorporated into the system.
+
+The logic was implemented using custom code written in the 
+
+Arduino IDE. The code reads the frequency output from the color sensor to determine the dominant color (e.g., Red, Green, Blue, White, Black). Based on the detected color or metal presence, the Arduino sends a signal to a 
+
+
+
+servo motor, which moves a sorting arm to a pre-defined position to categorize the object. A 
+
+
+16x2 LCD Display provides a user-friendly interface, showing the real-time status and the detected color of the object being sorted. The entire electronic circuit was assembled on a breadboard and housed within a custom-built chassis**]
                 </p>
             </div>
              <div class="content-section">
                 <h2>The Outcome</h2>
                 <p>
-                    [Your text about the final result goes here. Was the prototype successful? What were the key learnings from combining hardware and software?]
+                    [The project was a success, resulting in a functional prototype that could accurately sort objects based on multiple parameters. The system achieved high precision in color classification and successfully integrated metal detection, meeting the core goals of the project. This mini-project was an excellent exercise in hardware-software integration, demonstrating key skills in embedded systems programming, sensor interfacing, and actuator control. The final prototype effectively showcased a solution to automate and improve the efficiency of traditional sorting processes.]
                 </p>
             </div>
         </div>
