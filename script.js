@@ -1,16 +1,26 @@
-// Scroll Reveal
-function reveal() {
-    const reveals = document.querySelectorAll(".reveal");
+// Mouse glow
+const glow = document.querySelector('.cursor-glow');
+document.addEventListener('mousemove', e=>{
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+});
 
-    reveals.forEach((element) => {
-        const windowHeight = window.innerHeight;
-        const elementTop = element.getBoundingClientRect().top;
-        const revealPoint = 100;
-
-        if (elementTop < windowHeight - revealPoint) {
-            element.classList.add("active");
-        }
-    });
+// Typing animation
+const text = "AI & Cloud Engineer";
+let i = 0;
+function typing(){
+    if(i < text.length){
+        document.querySelector(".typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typing,80);
+    }
 }
+typing();
 
-window.addEventListener("scroll", reveal);
+// Modal functions
+function openModal(id){
+    document.getElementById(id).style.display="flex";
+}
+function closeModal(id){
+    document.getElementById(id).style.display="none";
+}
