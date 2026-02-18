@@ -200,8 +200,35 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top;
+    object-position: top; /* This fixes the head cut-off */
 }
+
+/* --- NEW: CENTERED NAME & ROLE FIX --- */
+.profile-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;     /* Horizontal Center */
+    justify-content: center; /* Vertical Center */
+    text-align: center;
+    width: 100%;
+}
+
+.profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+}
+
+.profile-info p {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the icon + text together */
+    gap: 0.5rem;
+    color: var(--text-muted);
+    width: 100%;
+}
+/* ------------------------------------- */
 
 /* Tech Stack Marquee */
 .tech-stack {
