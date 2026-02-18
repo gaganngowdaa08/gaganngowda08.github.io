@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/4c3b2f3b2e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+<div class="blob blob1"></div>
+<div class="blob blob2"></div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -23,29 +30,39 @@
     </ul>
 </nav>
 
-<!-- HERO SECTION -->
-<section class="hero" id="about">
+<!-- HERO -->
+<section class="hero reveal" id="about">
     <div class="hero-container">
 
-        <div class="glass-card left-card">
+        <div class="glass-card">
             <span class="badge">Available for Opportunities</span>
             <h1>AI & Cloud <br> Engineer</h1>
             <p>
                 Designing intelligent systems and deploying scalable applications 
                 using modern DevOps and cloud practices.
             </p>
+
+            <div class="social-icons">
+                <a href="https://linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
             <a href="resume.pdf" target="_blank">
                 <button class="primary-btn">Download Resume</button>
             </a>
         </div>
 
-        <div class="glass-card right-card">
+        <div class="glass-card">
             <h1>
                 Building <span class="highlight">Scalable AI</span><br>
                 & Cloud Systems
             </h1>
             <p>
-                AI & Cloud Engineer skilled in TensorFlow, Docker, Airflow, AWS,
+                Skilled in TensorFlow, Docker, Airflow, AWS,
                 and Full-Stack development. Passionate about building 
                 production-ready systems from model to deployment.
             </p>
@@ -60,10 +77,10 @@
 </section>
 
 <!-- SKILLS -->
-<section class="skills">
+<section class="skills reveal">
     <h2>Core Expertise</h2>
-    <div class="skills-container">
 
+    <div class="skills-container">
         <div class="skill-card">
             <h3>AI & Machine Learning</h3>
             <p>TensorFlow, Keras, CNN, NLP, OpenCV</p>
@@ -71,61 +88,50 @@
 
         <div class="skill-card">
             <h3>Cloud & DevOps</h3>
-            <p>AWS, Docker, CI/CD, Airflow, GitHub</p>
+            <p>AWS, Docker, CI/CD, Airflow</p>
         </div>
 
         <div class="skill-card">
             <h3>Backend Systems</h3>
-            <p>Python, Flask, PostgreSQL, SQL</p>
+            <p>Python, Flask, PostgreSQL</p>
         </div>
 
         <div class="skill-card">
             <h3>Frontend</h3>
             <p>HTML, CSS, JavaScript</p>
         </div>
-
     </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects" id="projects">
+<section class="projects reveal" id="projects">
     <h2>Featured Projects</h2>
 
     <div class="projects-container">
 
         <div class="project-card">
             <h3>PhytoDetect AI</h3>
-            <p>
-                Deep learning–based grape disease detection system using CNNs 
-                with multilingual NLP chatbot integration and cloud deployment.
-            </p>
-            <span class="tech">TensorFlow • Flask • Render • GitHub</span>
+            <p>Deep learning–based grape disease detection system with cloud deployment.</p>
+            <span class="tech">TensorFlow • Flask • Render</span>
         </div>
 
         <div class="project-card">
-            <h3>Dockerized Stock Data Pipeline</h3>
-            <p>
-                Containerized ETL pipeline using Apache Airflow to fetch stock 
-                data and store in PostgreSQL with Docker integration.
-            </p>
+            <h3>Dockerized Stock Pipeline</h3>
+            <p>Containerized ETL pipeline using Apache Airflow & PostgreSQL.</p>
             <span class="tech">Airflow • Docker • PostgreSQL</span>
         </div>
 
         <div class="project-card">
-            <h3>Color-Based Object Sorting System</h3>
-            <p>
-                Automated color sorting system using image processing 
-                and microcontroller integration.
-            </p>
+            <h3>Color Sorting System</h3>
+            <p>Image-processing-based object sorting with hardware integration.</p>
             <span class="tech">Python • OpenCV • Arduino</span>
         </div>
 
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Gagan Gowda | AI & Cloud Engineer</p>
+    © 2026 Gagan Gowda | AI & Cloud Engineer
 </footer>
 
 </body>
