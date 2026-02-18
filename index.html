@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gagan Gowda | Portfolio</title>
+    <title>Gagan Gowda | AI & Cloud Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="style.css">
     <script defer src="script.js"></script>
 
-    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -16,47 +15,45 @@
 
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="logo">GAGANGOWDA</div>
+    <div class="logo">GAGAN GOWDA</div>
     <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li><button class="hire-btn">Hire Me</button></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="resume.pdf" target="_blank" class="resume-btn">Resume</a></li>
     </ul>
 </nav>
 
 <!-- HERO SECTION -->
-<section class="hero">
-
+<section class="hero" id="about">
     <div class="hero-container">
 
-        <!-- LEFT CARD -->
-        <div class="glass-card small-card">
-            <span class="badge">Available for Internships</span>
-            <h1>Engineering <br> AI Solutions</h1>
-            <p>Aspiring IT Professional specializing in Cloud Computing and Full-Stack Development.</p>
-            <button class="resume-btn">My Resume</button>
+        <div class="glass-card left-card">
+            <span class="badge">Available for Opportunities</span>
+            <h1>AI & Cloud <br> Engineer</h1>
+            <p>
+                Designing intelligent systems and deploying scalable applications 
+                using modern DevOps and cloud practices.
+            </p>
+            <a href="resume.pdf" target="_blank">
+                <button class="primary-btn">Download Resume</button>
+            </a>
         </div>
 
-        <!-- CENTER TIMELINE -->
-        <div class="timeline">
-            <div class="year">2026</div>
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-            <div class="year">2022</div>
-        </div>
+        <div class="glass-card right-card">
+            <h1>
+                Building <span class="highlight">Scalable AI</span><br>
+                & Cloud Systems
+            </h1>
+            <p>
+                AI & Cloud Engineer skilled in TensorFlow, Docker, Airflow, AWS,
+                and Full-Stack development. Passionate about building 
+                production-ready systems from model to deployment.
+            </p>
 
-        <!-- RIGHT CARD -->
-        <div class="glass-card big-card">
-            <span class="badge">Available for Internships</span>
-            <h1>Engineering <span class="highlight">Scalable</span><br> AI Solutions</h1>
-            <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development.</p>
-
-            <div class="profile-section">
+            <div class="profile-box">
                 <img src="profile.jpg" alt="Profile">
-                <div class="skills-tag">Python & Java</div>
+                <div class="tag">Python • AWS • Docker</div>
             </div>
-
         </div>
 
     </div>
@@ -64,37 +61,72 @@
 
 <!-- SKILLS -->
 <section class="skills">
-    <div class="skill">PYTHON</div>
-    <div class="skill">JAVA</div>
-    <div class="skill">DOCKER</div>
-    <div class="skill">REACT JS</div>
-    <div class="skill">GIT</div>
-    <div class="skill">SQL</div>
-</section>
+    <h2>Core Expertise</h2>
+    <div class="skills-container">
 
-<!-- PROJECTS -->
-<section class="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>PhytoDetect AI</h3>
-            <p>AI-powered grape disease detection system using Deep Learning.</p>
+        <div class="skill-card">
+            <h3>AI & Machine Learning</h3>
+            <p>TensorFlow, Keras, CNN, NLP, OpenCV</p>
         </div>
 
-        <div class="project-card">
-            <h3>Cloud DevOps App</h3>
-            <p>Containerized application deployed using Docker & CI/CD pipeline.</p>
+        <div class="skill-card">
+            <h3>Cloud & DevOps</h3>
+            <p>AWS, Docker, CI/CD, Airflow, GitHub</p>
         </div>
 
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>Modern responsive portfolio built using HTML, CSS & JS.</p>
+        <div class="skill-card">
+            <h3>Backend Systems</h3>
+            <p>Python, Flask, PostgreSQL, SQL</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript</p>
         </div>
 
     </div>
 </section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="projects-container">
+
+        <div class="project-card">
+            <h3>PhytoDetect AI</h3>
+            <p>
+                Deep learning–based grape disease detection system using CNNs 
+                with multilingual NLP chatbot integration and cloud deployment.
+            </p>
+            <span class="tech">TensorFlow • Flask • Render • GitHub</span>
+        </div>
+
+        <div class="project-card">
+            <h3>Dockerized Stock Data Pipeline</h3>
+            <p>
+                Containerized ETL pipeline using Apache Airflow to fetch stock 
+                data and store in PostgreSQL with Docker integration.
+            </p>
+            <span class="tech">Airflow • Docker • PostgreSQL</span>
+        </div>
+
+        <div class="project-card">
+            <h3>Color-Based Object Sorting System</h3>
+            <p>
+                Automated color sorting system using image processing 
+                and microcontroller integration.
+            </p>
+            <span class="tech">Python • OpenCV • Arduino</span>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Gagan Gowda | AI & Cloud Engineer</p>
+</footer>
 
 </body>
 </html>
