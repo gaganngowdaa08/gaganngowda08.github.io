@@ -1,11 +1,11 @@
-// Simple animation for timeline items
+// Simple fade-in animation for project cards
 document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".timeline li");
-  items.forEach((item, index) => {
-    item.style.opacity = 0;
+  const cards = document.querySelectorAll(".project-card");
+  cards.forEach((card, index) => {
+    card.style.opacity = 0;
     setTimeout(() => {
-      item.style.transition = "opacity 0.8s ease-in";
-      item.style.opacity = 1;
+      card.style.transition = "opacity 0.8s ease-in";
+      card.style.opacity = 1;
     }, index * 400);
   });
 });
