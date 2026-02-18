@@ -2,135 +2,170 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Gagan Gowda | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>Gagan Gowda | AI Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="logo">GAGANGOWDA</div>
-    <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li><button class="hire-btn">Hire Me</button></li>
-    </ul>
-</nav>
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
 
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="hero-container">
+    <nav class="navbar">
+        <div class="logo">GAGAN GOWDA</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="btn-primary">Hire Me</a></li>
+        </ul>
+    </nav>
 
-        <!-- LEFT CARD -->
-        <div class="glass-card small-card">
-            <span class="badge">Available for Internships</span>
-            <h1>Engineering <br> AI Solutions</h1>
-            <p>Aspiring IT professional specializing in Cloud Computing and Full-Stack Development.</p>
-            <a href="resume.pdf" class="resume-btn">My Resume</a>
-            <div class="social">
-                <a href="https://linkedin.com/in/gagangowdaa08" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <header class="hero">
+        <div class="hero-content glass-card">
+            <div class="badge">Available for Internships</div>
+            <h1>Engineering <br> <span class="gradient-text">AI Solutions</span></h1>
+            <p>
+                Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development. 
+                Focusing on building scalable systems and solving complex problems with AI.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#" class="btn-outline"><i class="fas fa-cloud-download-alt"></i> My Resume</a>
+                <div class="socials">
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                </div>
             </div>
         </div>
 
-        <!-- CENTER TIMELINE -->
+        <div class="profile-card glass-card">
+            <div class="image-wrapper">
+                <img src="your-photo.jpg" alt="Gagan Gowda" class="profile-pic">
+            </div>
+            <div class="profile-info">
+                <h3>Gagan Gowda BG</h3>
+                <p><i class="fas fa-code"></i> Python & Java</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="tech-stack">
+        <div class="scroller">
+            <span>PYTHON</span>
+            <span>JAVA</span>
+            <span>DOCKER</span>
+            <span>REACT JS</span>
+            <span>AWS</span>
+            <span>SQL</span>
+            <span>GIT</span>
+            <span>OPENCV</span>
+            <span>AIRFLOW</span>
+            <span>PYTHON</span>
+            <span>JAVA</span>
+            <span>DOCKER</span>
+            <span>REACT JS</span>
+            <span>AWS</span>
+            <span>SQL</span>
+            <span>GIT</span>
+            <span>OPENCV</span>
+            <span>AIRFLOW</span>
+        </div>
+    </div>
+
+    <section id="projects" class="projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card glass-card">
+                <div class="card-header">
+                    <span class="tag">AI / Deep Learning</span>
+                    <i class="fas fa-leaf icon-glow"></i>
+                </div>
+                <h3>PhytoDetect AI</h3>
+                <p class="subtitle">Grape Leaf Disease Detection</p>
+                <p class="desc">Deep learning system using CNNs to analyze grape leaves. Features a multilingual NLP chatbot for farmer assistance.</p>
+                <div class="stack">
+                    <span>Python</span><span>TensorFlow</span><span>Flask</span>
+                </div>
+                <div class="links">
+                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="card-header">
+                    <span class="tag">DevOps / Data</span>
+                    <i class="fas fa-chart-line icon-glow"></i>
+                </div>
+                <h3>Stock Data Pipeline</h3>
+                <p class="subtitle">Dockerized ETL System</p>
+                <p class="desc">Containerized ETL pipeline using Apache Airflow to fetch Alpha Vantage data and store it in PostgreSQL.</p>
+                <div class="stack">
+                    <span>Docker</span><span>Airflow</span><span>PostgreSQL</span>
+                </div>
+                <div class="links">
+                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="project-card glass-card">
+                <div class="card-header">
+                    <span class="tag">IoT / Robotics</span>
+                    <i class="fas fa-robot icon-glow"></i>
+                </div>
+                <h3>Object Sorting System</h3>
+                <p class="subtitle">Automated Color Sorting</p>
+                <p class="desc">Integrated hardware and software using OpenCV and Arduino to sort objects based on color analysis.</p>
+                <div class="stack">
+                    <span>OpenCV</span><span>Arduino</span><span>Python</span>
+                </div>
+                <div class="links">
+                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section glass-card">
+        <h3>Education Journey</h3>
         <div class="timeline">
-            <div class="year">2026</div>
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-            <div class="year">2022</div>
-            <div class="dot"></div>
-            <div class="line"></div>
-            <div class="dot"></div>
-            <div class="year">2020</div>
-        </div>
-
-        <!-- RIGHT CARD -->
-        <div class="glass-card big-card">
-            <span class="badge">Available for Internships</span>
-            <h1>Engineering <span class="highlight">Scalable</span><br> AI Solutions</h1>
-            <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development.</p>
-
-            <div class="profile-section">
-                <img src="profile.jpg" alt="Profile">
-                <div class="skills-tag">Python & Java</div>
+            <div class="t-item">
+                <span class="year">2026</span>
+                <h4>KS Institute of Technology</h4>
+                <p>B.E. Computer Science</p>
             </div>
-
-            <div class="social">
-                <a href="https://linkedin.com/in/gagangowdaa08" target="_blank"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/gagangowdaa08" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://instagram.com/gagangowdaa08" target="_blank"><i class="fab fa-instagram"></i></a>
+            <div class="t-item">
+                <span class="year">2022</span>
+                <h4>Sri Chaitanya PU College</h4>
+                <p>Pre-University</p>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills">
-    <div class="skill">Python</div>
-    <div class="skill">Java</div>
-    <div class="skill">C</div>
-    <div class="skill">JavaScript</div>
-    <div class="skill">Docker</div>
-    <div class="skill">AWS</div>
-    <div class="skill">SQL</div>
-    <div class="skill">Git</div>
-    <div class="skill">React JS</div>
-    <div class="skill">OpenCV</div>
-    <div class="skill">TensorFlow</div>
-    <div class="skill">Flask</div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects">
-    <h2>Featured Projects</h2>
-
-    <div class="project-container">
-
-        <div class="project-card">
-            <h3>PhytoDetect AI</h3>
-            <p>Deep learning-based grape plant disease detection system with chatbot integration.</p>
+    <section id="contact" class="contact-section">
+        <div class="contact-card glass-card">
+            <h3>Contact Project</h3>
+            <p>Gagan Gowda | gaganngowdaa08@gmail.com</p>
+            <form>
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="Enter name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell me about your project"></textarea>
+                </div>
+                <button type="submit" class="btn-primary full-width">Send Message</button>
+            </form>
         </div>
+    </section>
 
-        <div class="project-card">
-            <h3>Colour-Based Object Sorting System</h3>
-            <p>Automated color sorting system using Python, OpenCV, Arduino, and Flask.</p>
-        </div>
-
-        <div class="project-card">
-            <h3>Dockerized Stock Data Pipeline</h3>
-            <p>ETL pipeline with Apache Airflow, PostgreSQL, and Docker for stock data.</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="contact">
-    <h2>Hire Me</h2>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <select>
-            <option>Explore Case Study</option>
-            <option>PhytoDetect AI</option>
-            <option>Colour Sorting</option>
-            <option>Stock Data Pipeline</option>
-        </select>
-        <button type="submit" class="hire-btn">Send</button>
-    </form>
-</section>
-
+    <script src="script.js"></script>
 </body>
 </html>
