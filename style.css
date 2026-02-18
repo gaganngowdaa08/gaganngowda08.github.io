@@ -1,63 +1,123 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f4f6f9;
-  color: #333;
+  background: #121212;
+  color: #eee;
 }
 
-.container {
+header {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  align-items: center;
   padding: 20px;
+  background: #1f1f1f;
 }
 
-.left-panel, .center-panel, .right-panel {
-  flex: 1;
+header h1 {
+  color: #00aaff;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #eee;
+  text-decoration: none;
+}
+
+header nav a:hover {
+  color: #00aaff;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+}
+
+.card {
+  background: #1f1f1f;
   padding: 20px;
-  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-h1 {
-  font-size: 2em;
-  color: #007acc;
+  width: 30%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #007acc;
+  background: #00aaff;
   color: #fff;
-  text-decoration: none;
   border-radius: 25px;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
 .btn:hover {
-  background: #005f99;
+  background: #0088cc;
 }
 
 .social a {
-  margin-right: 10px;
-  color: #007acc;
-  font-weight: bold;
+  margin: 0 5px;
+  color: #00aaff;
+  font-size: 1.2em;
 }
 
 .profile-photo {
   width: 100%;
   border-radius: 12px;
   margin-top: 15px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-.tech-tags span {
+.tags {
+  text-align: center;
+  padding: 20px;
+}
+
+.tags span {
   display: inline-block;
-  background: #007acc;
+  background: #00aaff;
   color: #fff;
   padding: 6px 12px;
   margin: 5px;
   border-radius: 20px;
-  font-size: 0.85em;
+}
+
+.projects {
+  padding: 40px;
+}
+
+.project-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.project-card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.contact {
+  padding: 40px;
+  background: #1f1f1f;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input, .contact textarea, .contact select {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+.contact button {
+  background: #00aaff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 25px;
 }
