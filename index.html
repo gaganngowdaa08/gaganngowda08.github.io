@@ -140,19 +140,20 @@
 
     <section id="contact" class="contact-section">
         <div class="contact-card glass-card">
-            <h3>Contact </h3>
+            <h3>Contact Project</h3>
             <p>Gagan Gowda | gaganngowdaa08@gmail.com</p>
-            <form>
+            <form action="https://formspree.io/f/mgvlgzoe" method="POST">
                 <div class="form-group">
                     <label>Your Name</label>
-                    <input type="text" placeholder="Enter name">
+                    <input type="text" name="name" placeholder="Enter name" required>
                 </div>
                 <div class="form-group">
                     <label>Email Address</label>
-                    <input type="email" placeholder="Enter email">
+                    <input type="email" name="email" placeholder="Enter email" required>
                 </div>
                 <div class="form-group">
                     <label>Message</label>
+                    <textarea name="message" placeholder="Tell me about your project" required></textarea>
                 </div>
                 <button type="submit" class="btn-primary full-width">Send Message</button>
             </form>
@@ -164,31 +165,25 @@
             <button class="close-btn" onclick="closeModal('modal-phyto')">&times;</button>
             <div class="modal-grid">
                 <div class="modal-img-wrapper">
-                    <img src="grapecare-ui.png" alt="GrapeCare UI" class="modal-img">
-                    <img src="grapecare-result.png" alt="Detection Results" class="modal-img">
-                    <img src="grapecare-gradcam.png" alt="GradCAM Analysis" class="modal-img">
-                    <img src="grapecare-plots.png" alt="Training Plots" class="modal-img">
-                    <img src="grapecare-matrix.png" alt="Confusion Matrix" class="modal-img">
-                    <img src="grapecare-roc.png" alt="ROC Curve" class="modal-img">
+                    <img src="grapecare-ui.png" alt="UI" class="modal-img">
+                    <img src="grapecare-result.png" alt="Result" class="modal-img">
+                    <img src="grapecare-roc.png" alt="ROC" class="modal-img">
+                    <img src="grapecare-plots.png" alt="Plots" class="modal-img">
+                    <img src="grapecare-matrix.png" alt="Matrix" class="modal-img">
+                    <img src="grapecare-gradcam.png" alt="GradCAM" class="modal-img">
                 </div>
-                
                 <div class="modal-info">
                     <h2>PhytoDetect AI</h2>
                     <p class="role-badge">Role: Model Integration & Backend Dev</p>
                     <p class="modal-desc">
                         Developed a deep learning-based grape plant disease detection system using CNNs. 
-                        I integrated a multilingual NLP chatbot to assist farmers with queries. 
-                        My primary focus was on the backend logic and deploying the model using Flask and Render.
+                        Integrated a multilingual NLP chatbot and deployed using Flask.
                     </p>
                     <div class="tech-used">
                         <h4>Tech Stack:</h4>
-                        <div class="stack">
-                            <span>Python</span><span>Flask</span><span>TensorFlow</span><span>HTML/CSS</span><span>Render</span>
-                        </div>
+                        <div class="stack"><span>Python</span><span>Flask</span><span>TensorFlow</span><span>HTML/CSS</span></div>
                     </div>
-                    <a href="https://github.com/gaganngowdaa08/grapecare-v2" target="_blank" class="btn-primary">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Source Code</a>
                 </div>
             </div>
         </div>
@@ -199,27 +194,20 @@
             <button class="close-btn" onclick="closeModal('modal-stock')">&times;</button>
             <div class="modal-grid">
                 <div class="modal-img-wrapper">
-                    <img src="airflow-dashboard (1).png" alt="Airflow Dashboard" class="modal-img">
+                    <img src="airflow-dashboard (1).png" alt="Dashboard" class="modal-img">
                     <img src="airflow-dag-graph (1).png" alt="DAG Graph" class="modal-img">
                 </div>
-                
                 <div class="modal-info">
                     <h2>Stock Data Pipeline</h2>
                     <p class="role-badge">Role: DAG Development & Dockerization</p>
                     <p class="modal-desc">
-                        Built a containerized ETL pipeline using Apache Airflow. 
-                        I was responsible for writing the DAGs to fetch stock data from Alpha Vantage API 
-                        and creating the Docker containers to ensure the environment was consistent across deployments.
+                        Built a containerized ETL pipeline using Apache Airflow to fetch Alpha Vantage data and store it in PostgreSQL.
                     </p>
                     <div class="tech-used">
                         <h4>Tech Stack:</h4>
-                        <div class="stack">
-                            <span>Python</span><span>Apache Airflow</span><span>PostgreSQL</span><span>Docker</span>
-                        </div>
+                        <div class="stack"><span>Docker</span><span>Airflow</span><span>PostgreSQL</span><span>Python</span></div>
                     </div>
-                    <a href="https://github.com/gaganngowdaa08/docker-airflow-stock-pipeline" target="_blank" class="btn-primary">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Source Code</a>
                 </div>
             </div>
         </div>
@@ -230,28 +218,21 @@
             <button class="close-btn" onclick="closeModal('modal-sorting')">&times;</button>
             <div class="modal-grid">
                 <div class="modal-img-wrapper">
-                    <img src="img1.png" alt="Sorting System View 1" class="modal-img">
-                    <img src="img2.png" alt="Sorting System View 2" class="modal-img">
-                    <img src="img3.png" alt="Sorting System View 3" class="modal-img">
+                    <img src="img1.png" alt="View 1" class="modal-img">
+                    <img src="img2.png" alt="View 2" class="modal-img">
+                    <img src="img3.png" alt="View 3" class="modal-img">
                 </div>
-                
                 <div class="modal-info">
                     <h2>Object Sorting System</h2>
                     <p class="role-badge">Role: Hardware Integration & Image Processing</p>
                     <p class="modal-desc">
-                        Developed an automated color sorting system. 
-                        My role involved programming the Arduino for servo control and writing the Python OpenCV script 
-                        to detect object colors in real-time via serial communication.
+                        Automated color sorting system using Arduino for servo control and Python OpenCV for real-time detection.
                     </p>
                     <div class="tech-used">
                         <h4>Tech Stack:</h4>
-                        <div class="stack">
-                            <span>Python</span><span>OpenCV</span><span>Arduino</span><span>Flask</span>
-                        </div>
+                        <div class="stack"><span>OpenCV</span><span>Arduino</span><span>Python</span></div>
                     </div>
-                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary">
-                        <i class="fab fa-github"></i> View Source Code
-                    </a>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary"><i class="fab fa-github"></i> View Source Code</a>
                 </div>
             </div>
         </div>
