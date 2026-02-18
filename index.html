@@ -53,24 +53,10 @@
 
     <div class="tech-stack">
         <div class="scroller">
-            <span>PYTHON</span>
-            <span>JAVA</span>
-            <span>DOCKER</span>
-            <span>REACT JS</span>
-            <span>AWS</span>
-            <span>SQL</span>
-            <span>GIT</span>
-            <span>OPENCV</span>
-            <span>AIRFLOW</span>
-            <span>PYTHON</span>
-            <span>JAVA</span>
-            <span>DOCKER</span>
-            <span>REACT JS</span>
-            <span>AWS</span>
-            <span>SQL</span>
-            <span>GIT</span>
-            <span>OPENCV</span>
-            <span>AIRFLOW</span>
+            <span>PYTHON</span><span>JAVA</span><span>DOCKER</span><span>REACT JS</span>
+            <span>AWS</span><span>SQL</span><span>GIT</span><span>OPENCV</span><span>AIRFLOW</span>
+            <span>PYTHON</span><span>JAVA</span><span>DOCKER</span><span>REACT JS</span>
+            <span>AWS</span><span>SQL</span><span>GIT</span><span>OPENCV</span><span>AIRFLOW</span>
         </div>
     </div>
 
@@ -90,7 +76,7 @@
                     <span>Python</span><span>TensorFlow</span><span>Flask</span>
                 </div>
                 <div class="links">
-                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                    <button class="btn-text" onclick="openModal('modal-phyto')">View Details <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -106,7 +92,7 @@
                     <span>Docker</span><span>Airflow</span><span>PostgreSQL</span>
                 </div>
                 <div class="links">
-                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                    <button class="btn-text" onclick="openModal('modal-stock')">View Details <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
 
@@ -122,7 +108,7 @@
                     <span>OpenCV</span><span>Arduino</span><span>Python</span>
                 </div>
                 <div class="links">
-                    <a href="#">View Code <i class="fas fa-arrow-right"></i></a>
+                    <button class="btn-text" onclick="openModal('modal-sorting')">View Details <i class="fas fa-arrow-right"></i></button>
                 </div>
             </div>
         </div>
@@ -135,11 +121,19 @@
                 <span class="year">2026</span>
                 <h4>KS Institute of Technology</h4>
                 <p>B.E. Computer Science</p>
+                <small>Bengaluru, India</small>
             </div>
             <div class="t-item">
                 <span class="year">2022</span>
                 <h4>Sri Chaitanya PU College</h4>
                 <p>Pre-University</p>
+                <small>Bengaluru, India</small>
+            </div>
+            <div class="t-item">
+                <span class="year">2020</span>
+                <h4>Sri Chaitanya Techno School</h4>
+                <p>SSLC (10th Grade)</p>
+                <small>Bengaluru, India</small>
             </div>
         </div>
     </section>
@@ -165,6 +159,93 @@
             </form>
         </div>
     </section>
+
+    <div id="modal-phyto" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="close-btn" onclick="closeModal('modal-phyto')">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img-wrapper">
+                    <img src="project1.jpg" alt="PhytoDetect Interface" class="modal-img">
+                </div>
+                <div class="modal-info">
+                    <h2>PhytoDetect AI</h2>
+                    <p class="role-badge">Role: Model Integration & Backend Dev</p>
+                    <p class="modal-desc">
+                        [cite_start]Developed a deep learning-based grape plant disease detection system using CNNs[cite: 24]. 
+                        I integrated a multilingual NLP chatbot to assist farmers with queries. 
+                        [cite_start]My primary focus was on the backend logic and deploying the model using Flask and Render[cite: 26, 27].
+                    </p>
+                    <div class="tech-used">
+                        <h4>Tech Stack:</h4>
+                        <div class="stack">
+                            <span>Python</span><span>Flask</span><span>TensorFlow</span><span>HTML/CSS</span><span>Render</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-stock" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="close-btn" onclick="closeModal('modal-stock')">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img-wrapper">
+                    <img src="project2.jpg" alt="Stock Pipeline" class="modal-img">
+                </div>
+                <div class="modal-info">
+                    <h2>Stock Data Pipeline</h2>
+                    <p class="role-badge">Role: DAG Development & Dockerization</p>
+                    <p class="modal-desc">
+                        [cite_start]Built a containerized ETL pipeline using Apache Airflow[cite: 20]. 
+                        I was responsible for writing the DAGs to fetch stock data from Alpha Vantage API 
+                        [cite_start]and creating the Docker containers to ensure the environment was consistent across deployments[cite: 21].
+                    </p>
+                    <div class="tech-used">
+                        <h4>Tech Stack:</h4>
+                        <div class="stack">
+                            <span>Python</span><span>Apache Airflow</span><span>PostgreSQL</span><span>Docker</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-sorting" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="close-btn" onclick="closeModal('modal-sorting')">&times;</button>
+            <div class="modal-grid">
+                <div class="modal-img-wrapper">
+                    <img src="project3.jpg" alt="Object Sorting" class="modal-img">
+                </div>
+                <div class="modal-info">
+                    <h2>Object Sorting System</h2>
+                    <p class="role-badge">Role: Hardware Integration & Image Processing</p>
+                    <p class="modal-desc">
+                        [cite_start]Developed an automated color sorting system[cite: 16]. 
+                        My role involved programming the Arduino for servo control and writing the Python OpenCV script 
+                        [cite_start]to detect object colors in real-time via serial communication[cite: 17, 18].
+                    </p>
+                    <div class="tech-used">
+                        <h4>Tech Stack:</h4>
+                        <div class="stack">
+                            <span>Python</span><span>OpenCV</span><span>Arduino</span><span>Flask</span>
+                        </div>
+                    </div>
+                    <a href="https://github.com/gaganngowdaa08" target="_blank" class="btn-primary">
+                        <i class="fab fa-github"></i> View Source Code
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
