@@ -1,123 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: #121212;
-  color: #eee;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 80% 20%, #7c3aed 0%, transparent 40%),
+                radial-gradient(circle at 10% 80%, #9333ea 0%, transparent 40%),
+                #0f172a;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: #1f1f1f;
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    align-items: center;
 }
 
-header h1 {
-  color: #00aaff;
+.logo {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-header nav a {
-  margin: 0 10px;
-  color: #eee;
-  text-decoration: none;
+.navbar ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    align-items: center;
 }
 
-header nav a:hover {
-  color: #00aaff;
+.hire-btn {
+    background: linear-gradient(90deg, #9333ea, #6366f1);
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
 }
 
+/* HERO */
 .hero {
-  display: flex;
-  justify-content: space-around;
-  padding: 40px;
+    padding: 60px 80px;
 }
 
-.card {
-  background: #1f1f1f;
-  padding: 20px;
-  border-radius: 12px;
-  width: 30%;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: #00aaff;
-  color: #fff;
-  border-radius: 25px;
-  text-decoration: none;
-  margin-top: 10px;
+/* GLASS EFFECT */
+.glass-card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(25px);
+    border-radius: 25px;
+    padding: 40px;
+    border: 1px solid rgba(255,255,255,0.2);
+    box-shadow: 0 0 40px rgba(147, 51, 234, 0.3);
 }
 
-.btn:hover {
-  background: #0088cc;
+.small-card {
+    width: 28%;
 }
 
-.social a {
-  margin: 0 5px;
-  color: #00aaff;
-  font-size: 1.2em;
+.big-card {
+    width: 42%;
 }
 
-.profile-photo {
-  width: 100%;
-  border-radius: 12px;
-  margin-top: 15px;
+.badge {
+    background: #4f46e5;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 12px;
+    display: inline-block;
+    margin-bottom: 15px;
 }
 
-.tags {
-  text-align: center;
-  padding: 20px;
+.highlight {
+    color: #a855f7;
 }
 
-.tags span {
-  display: inline-block;
-  background: #00aaff;
-  color: #fff;
-  padding: 6px 12px;
-  margin: 5px;
-  border-radius: 20px;
+h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
 }
 
+p {
+    opacity: 0.8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.resume-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* PROFILE */
+.profile-section {
+    margin-top: 25px;
+    position: relative;
+}
+
+.profile-section img {
+    width: 200px;
+    border-radius: 20px;
+}
+
+.skills-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: white;
+    color: black;
+    padding: 6px 14px;
+    border-radius: 15px;
+    font-size: 12px;
+}
+
+/* TIMELINE */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year {
+    margin: 10px 0;
+    opacity: 0.7;
+}
+
+.line {
+    width: 2px;
+    height: 120px;
+    background: linear-gradient(to bottom, #a855f7, white);
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #a855f7;
+    border-radius: 50%;
+}
+
+/* SKILLS */
+.skills {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
+    flex-wrap: wrap;
+}
+
+.skill {
+    background: rgba(255,255,255,0.08);
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* PROJECTS */
 .projects {
-  padding: 40px;
+    padding: 80px;
 }
 
-.project-grid {
-  display: flex;
-  gap: 20px;
+.projects h2 {
+    margin-bottom: 30px;
+}
+
+.project-container {
+    display: flex;
+    gap: 25px;
 }
 
 .project-card {
-  background: #1f1f1f;
-  padding: 20px;
-  border-radius: 12px;
-  flex: 1;
+    flex: 1;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
 }
 
-.contact {
-  padding: 40px;
-  background: #1f1f1f;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-}
-
-.contact input, .contact textarea, .contact select {
-  margin: 10px 0;
-  padding: 10px;
-  border-radius: 8px;
-  border: none;
-}
-
-.contact button {
-  background: #00aaff;
-  color: #fff;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(147, 51, 234, 0.5);
 }
