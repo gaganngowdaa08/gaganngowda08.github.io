@@ -1,140 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gagan Gowda | AI & Cloud Engineer</title>
-
-<link rel="stylesheet" href="style.css">
-<script defer src="script.js"></script>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<script src="https://kit.fontawesome.com/4c3b2f3b2e.js" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-<div class="blob blob1"></div>
-<div class="blob blob2"></div>
-
 <!-- NAVBAR -->
 <nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">GAGANGOWDA</div>
+  <div class="nav-wrapper">
+    <div class="logo">GAGANGOWDA</div>
 
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><button onclick="scrollToContact()" class="hire-btn">Hire Me</button></li>
-        </ul>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <button onclick="scrollToContact()" class="hire-btn">Hire Me</button>
     </div>
+  </div>
 </nav>
 
-<!-- HERO -->
+
+<!-- HERO SECTION -->
 <section class="hero" id="about">
-<div class="hero-container">
+  <div class="hero-grid">
 
     <!-- LEFT CARD -->
-    <div class="card small-card">
-        <span class="badge">Available for Opportunities</span>
-        <h1>Engineering<br>AI Solutions</h1>
-        <p>
-            AI & Cloud Engineer specializing in scalable ML systems,
-            DevOps pipelines and full-stack deployment.
-        </p>
+    <div class="glass-card small-card">
+      <span class="badge">Available for Internships</span>
+      <h1>Engineering<br>AI Solutions</h1>
+      <p>
+        AI & Cloud Engineer specializing in scalable ML systems,
+        DevOps pipelines and full-stack deployment.
+      </p>
 
-        <a href="resume.pdf" target="_blank" class="resume-link">
-            <i class="fas fa-download"></i> My Resume
-        </a>
+      <a href="resume.pdf" target="_blank" class="resume-btn">
+        <i class="fas fa-download"></i> My Resume
+      </a>
     </div>
 
     <!-- TIMELINE -->
     <div class="timeline">
-        <div class="year">2026</div>
-        <div class="line"></div>
-        <div class="year">2022</div>
+      <span>2026</span>
+      <div class="timeline-line"></div>
+      <span>2022</span>
     </div>
 
     <!-- RIGHT CARD -->
-    <div class="card big-card">
-        <span class="badge">AI & Cloud Engineer</span>
-        <h1>
-            Engineering <span class="highlight">Scalable</span><br>
-            AI Solutions
-        </h1>
+    <div class="glass-card big-card">
+      <span class="badge">AI & Cloud Engineer</span>
 
-        <p>
-            Building production-ready AI systems using TensorFlow,
-            Docker, Airflow, AWS, and modern backend frameworks.
-        </p>
+      <h1>
+        Engineering <span class="highlight">Scalable</span><br>
+        AI Solutions
+      </h1>
 
-        <div class="profile-box">
-            <img src="profile.jpg">
-            <div class="skill-tag">Python • AWS • Docker</div>
-        </div>
+      <p>
+        Building production-ready AI systems using TensorFlow,
+        Docker, Airflow, AWS and modern backend frameworks.
+      </p>
 
-        <div class="social">
-            <a href="https://github.com/YOUR_GITHUB" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <div class="profile-wrapper">
+        <img src="profile.jpg" alt="Profile">
+        <div class="skill-chip">Python • AWS • Docker</div>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://github.com/YOUR_GITHUB" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+
     </div>
 
-</div>
+  </div>
 </section>
-
-<!-- SKILLS -->
-<section class="skills">
-    <div class="skills-row">
-        <span>PYTHON</span>
-        <span>DOCKER</span>
-        <span>AWS</span>
-        <span>TENSORFLOW</span>
-        <span>AIRFLOW</span>
-        <span>FLASK</span>
-        <span>SQL</span>
-        <span>GIT</span>
-    </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-
-<div class="projects-container">
-
-<div class="projects-left">
-<h2>Featured Projects</h2>
-
-<div class="project-card">
-<img src="project1.jpg">
-<h3>PhytoDetect AI</h3>
-<p>Deep learning-based grape disease detection system with cloud deployment.</p>
-</div>
-
-<div class="project-card">
-<img src="project2.jpg">
-<h3>Dockerized Stock Pipeline</h3>
-<p>Containerized ETL pipeline using Apache Airflow & PostgreSQL.</p>
-</div>
-
-<div class="project-card">
-<img src="project3.jpg">
-<h3>Color Sorting System</h3>
-<p>Image processing system integrated with Arduino hardware.</p>
-</div>
-
-</div>
-
-<!-- CONTACT CARD -->
-<div class="contact-card" id="contact">
-<h3>Contact Me</h3>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message"></textarea>
-<button>Send Message</button>
-</div>
-
-</div>
-</section>
-
-</body>
-</html>
