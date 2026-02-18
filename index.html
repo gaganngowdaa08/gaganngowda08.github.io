@@ -2,94 +2,99 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Gagan Gowda | Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gagan Gowda | Full-Stack Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <div class="blob blob-purple"></div>
-    <div class="blob blob-blue"></div>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">GAGANGOWDA</div>
+    <ul>
+        <li>About</li>
+        <li>Projects</li>
+        <li><button class="hire-btn">Hire Me</button></li>
+    </ul>
+</nav>
 
-    <nav class="glass-nav">
-        <div class="logo">GAGAN<span>GOWDA</span></div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
-        </ul>
-    </nav>
+<!-- HERO SECTION -->
+<section class="hero">
 
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <span class="status-badge">Available for Internships</span>
-                <h1>Engineering <span class="gradient-text">Scalable</span><br>AI Solutions</h1>
-                <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development. [cite: 6]</p>
-                
-                <div class="hero-actions">
-                    <a href="Gagan_Gowda_Resume.pdf" class="btn-main" download>
-                        <i class="fa-solid fa-cloud-arrow-down"></i> My Resume
-                    </a>
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/gagan-gowda-1b63a22b4/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://github.com/gaganngowdaa08" target="_blank"><i class="fa-brands fa-github"></i></a>
-                    </div>
-                </div>
+    <div class="hero-container">
+
+        <!-- LEFT CARD -->
+        <div class="glass-card small-card">
+            <span class="badge">Available for Internships</span>
+            <h1>Engineering <br> AI Solutions</h1>
+            <p>Aspiring IT Professional specializing in Cloud Computing and Full-Stack Development.</p>
+            <button class="resume-btn">My Resume</button>
+        </div>
+
+        <!-- CENTER TIMELINE -->
+        <div class="timeline">
+            <div class="year">2026</div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="year">2022</div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="glass-card big-card">
+            <span class="badge">Available for Internships</span>
+            <h1>Engineering <span class="highlight">Scalable</span><br> AI Solutions</h1>
+            <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development.</p>
+
+            <div class="profile-section">
+                <img src="profile.jpg" alt="Profile">
+                <div class="skills-tag">Python & Java</div>
             </div>
 
-            <div class="hero-visual">
-                <div class="profile-frame">
-                    <img src="your-photo.jpg" alt="Gagan Gowda" class="profile-img">
-                    <div class="floating-tag">
-                        <code>&lt;/&gt; Python & Java</code>
-                    </div>
-                </div>
-            </div>
         </div>
-    </section>
 
-    <div class="tech-marquee">
-        <div class="track">
-            <span>PYTHON</span><span>DOCKER</span><span>AWS</span><span>JAVA</span><span>REACT JS</span><span>SQL</span><span>GIT</span><span>OPENCV</span>
-            <span>PYTHON</span><span>DOCKER</span><span>AWS</span><span>JAVA</span><span>REACT JS</span><span>SQL</span><span>GIT</span><span>OPENCV</span>
-        </div>
     </div>
+</section>
 
-    <section id="projects" class="projects-section">
-        <h2 class="section-heading">Featured <span class="gradient-text">Projects</span></h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="card-glow"></div>
-                <span class="tag">AI / Deep Learning</span>
-                <h3>PhytoDetect AI</h3>
-                <p>Deep learning-based grape plant disease detection with a multilingual NLP chatbot. [cite: 24, 25]</p>
-                <div class="tech-stack">
-                    <span>TensorFlow</span><span>Flask</span><span>Render</span> [cite: 27]
-                </div>
-                <a href="project1.html" class="case-study-btn">Explore Case Study <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+<!-- SKILLS -->
+<section class="skills">
+    <div class="skill">PYTHON</div>
+    <div class="skill">JAVA</div>
+    <div class="skill">DOCKER</div>
+    <div class="skill">REACT JS</div>
+    <div class="skill">GIT</div>
+    <div class="skill">SQL</div>
+</section>
 
-            <div class="project-card">
-                <div class="card-glow"></div>
-                <span class="tag">DevOps / ETL</span>
-                <h3>Dockerized Stock Pipeline</h3>
-                <p>Containerized ETL pipeline using Apache Airflow and PostgreSQL. [cite: 20]</p>
-                <div class="tech-stack">
-                    <span>Airflow</span><span>Docker</span><span>PostgreSQL</span> [cite: 22]
-                </div>
-                <a href="project2.html" class="case-study-btn">Explore Case Study <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+<!-- PROJECTS -->
+<section class="projects">
+    <h2>Featured Projects</h2>
 
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>PhytoDetect AI</h3>
+            <p>AI-powered grape disease detection system using Deep Learning.</p>
         </div>
-    </section>
 
-    <footer>
-        <p>© 2026 Gagan Gowda BG • Bangalore, India [cite: 9]</p>
-    </footer>
+        <div class="project-card">
+            <h3>Cloud DevOps App</h3>
+            <p>Containerized application deployed using Docker & CI/CD pipeline.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Modern responsive portfolio built using HTML, CSS & JS.</p>
+        </div>
+
+    </div>
+</section>
 
 </body>
 </html>
