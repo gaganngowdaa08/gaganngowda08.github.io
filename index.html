@@ -1,103 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gagan Gowda Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Gagan Gowda | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <!-- Header -->
-  <header>
-    <h1>GAGANGOWDA</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Hire Me</a>
-    </nav>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="card left">
-      <h2>Engineering AI Solutions</h2>
-      <p>Available for Internships</p>
-      <p>Aspiring IT professional specializing in Cloud/DevOps and Full-Stack Development.</p>
-      <a href="resume.pdf" class="btn">My Resume</a>
-      <a href="https://linkedin.com/in/gagangowdaa08" target="_blank"><i class="fab fa-linkedin"></i></a>
+<!-- NAVBAR -->
+<nav class="navbar">
+    <div class="logo">GAGANGOWDA</div>
+    <ul>
+        <li>About</li>
+        <li>Projects</li>
+        <li><button class="hire-btn">Hire Me</button></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-container">
+
+        <!-- LEFT CARD -->
+        <div class="glass-card small-card">
+            <span class="badge">Available for Internships</span>
+            <h1>Engineering <br> AI Solutions</h1>
+            <p>Aspiring IT Professional specializing in Cloud Computing and Full-Stack Development.</p>
+            <button class="resume-btn">My Resume</button>
+        </div>
+
+        <!-- CENTER TIMELINE -->
+        <div class="timeline">
+            <div class="year">2026</div>
+            <div class="dot"></div>
+            <div class="line"></div>
+            <div class="dot"></div>
+            <div class="year">2022</div>
+        </div>
+
+        <!-- RIGHT CARD -->
+        <div class="glass-card big-card">
+            <span class="badge">Available for Internships</span>
+            <h1>Engineering <span class="highlight">Scalable</span><br> AI Solutions</h1>
+            <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development.</p>
+
+            <div class="profile-section">
+                <img src="profile.jpg" alt="Profile">
+                <div class="skills-tag">Python & Java</div>
+            </div>
+
+        </div>
+
     </div>
+</section>
 
-    <div class="card center">
-      <h2>Education Timeline</h2>
-      <ul class="timeline">
-        <li><span>2020</span> SSLC - Sri Chaitanya Techno School</li>
-        <li><span>2022</span> Pre-University - Sri Chaitanya PU College</li>
-        <li><span>2026</span> B.E - Computer Science, KS Institute of Technology</li>
-      </ul>
-    </div>
+<!-- SKILLS -->
+<section class="skills">
+    <div class="skill">PYTHON</div>
+    <div class="skill">JAVA</div>
+    <div class="skill">DOCKER</div>
+    <div class="skill">REACT JS</div>
+    <div class="skill">GIT</div>
+    <div class="skill">SQL</div>
+</section>
 
-    <div class="card right">
-      <h2>Engineering Scalable AI Solutions</h2>
-      <p>Available for Internships</p>
-      <p>Aspiring IT professional specializing in Cloud Computing, DevOps, and Full-Stack Development.</p>
-      <a href="resume.pdf" class="btn">My Resume</a>
-      <div class="social">
-        <a href="https://linkedin.com/in/gagangowdaa08" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/gagangowdaa08" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://instagram.com/gagangowdaa08" target="_blank"><i class="fab fa-instagram"></i></a>
-      </div>
-      <img src="profile.jpg" alt="Profile Photo" class="profile-photo">
-      <p class="skills-label">Python & Java</p>
-    </div>
-  </section>
-
-  <!-- Tech Tags -->
-  <section class="tags">
-    <span>Python</span><span>Java</span><span>C</span><span>JavaScript</span>
-    <span>Docker</span><span>AWS</span><span>SQL</span><span>Git</span>
-    <span>React JS</span><span>OpenCV</span><span>TensorFlow</span><span>Flask</span>
-  </section>
-
-  <!-- Featured Projects -->
-  <section id="projects" class="projects">
+<!-- PROJECTS -->
+<section class="projects">
     <h2>Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>PhytoDetect AI</h3>
-        <p>KSIT, Bangalore</p>
-        <p>Deep learning-based grape plant disease detection system with chatbot integration.</p>
-      </div>
-      <div class="project-card">
-        <h3>Colour-Based Object Sorting</h3>
-        <p>College Project</p>
-        <p>Automated color sorting system using Python, OpenCV, and Arduino.</p>
-      </div>
-      <div class="project-card">
-        <h3>Dockerized Stock Data Pipeline</h3>
-        <p>Personal Project</p>
-        <p>ETL pipeline with Airflow, PostgreSQL, and Docker for stock data.</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Contact Form -->
-  <section id="contact" class="contact">
-    <h2>Hire Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
-      <select>
-        <option>Explore Case Study</option>
-        <option>PhytoDetect AI</option>
-        <option>Colour Sorting</option>
-        <option>Stock Data Pipeline</option>
-      </select>
-      <button type="submit" class="btn">Send</button>
-    </form>
-  </section>
+    <div class="project-container">
+
+        <div class="project-card">
+            <h3>PhytoDetect AI</h3>
+            <p>AI-powered grape disease detection system using Deep Learning.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Cloud DevOps App</h3>
+            <p>Containerized application deployed using Docker & CI/CD pipeline.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Modern responsive portfolio built using HTML, CSS & JS.</p>
+        </div>
+
+    </div>
+</section>
+
 </body>
 </html>
